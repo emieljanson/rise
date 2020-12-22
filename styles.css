@@ -1,0 +1,35 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+p {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #787A83;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  font-weight: 600;
+}
+p strong {
+  color: #000;
+  font-weight: 600;
+}
+
+section {
+  padding: 6em 0;
+}
+
+.wrapper {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+#rise {
+  background-color: #100033;
+  text-align: center;
+  color: #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */
