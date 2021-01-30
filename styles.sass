@@ -2,41 +2,83 @@
 $black: #000
 $white: #fff
 
-$gray-5: #787A83
+$laguna: #F4B666
+
+$gray-5: #9292BF
 
 $night-blue: #100033
 
 // Font stack
-$font-stack: -apple-system, BlinkMacSystemFont, sans-serif
+$body-font: -apple-system, BlinkMacSystemFont, sans-serif
+$title-font: 'Merriweather', serif
 
 // Breakpoints
-$max-width: 840px
+$max-width: 620px
 
 html, body
   margin: 0
   padding: 0
-  font-family: $font-stack
+  font-family: $body-font
+  background-color: $night-blue
+  text-rendering: optimizeLegibility
+  background-image: radial-gradient(circle, #FFCCB2, #A85FE5 30%, #2B0179 60%, $night-blue)
+  background-position: 0 1800px
+  background-repeat: no-repeat
+
+h1, h2, h3
+  font-family: $title-font
+  color: $white
+  font-weight: 300
+
+h1
+  font-size: 3em
+
+h2
+  font-size: 2em
+
+h4
+  font-family: $body-font
+  color: $laguna
+  text-transform: uppercase
+  font-size: .8em
+  letter-spacing: .1em
+  text-align: center
 
 p
-  font-family: $font-stack
+  font-family: $body-font
   color: $gray-5
-  font-size: 1.5em
-  line-height: 1.25em
-  font-weight: 600
-
-  strong
-    color: $black
-    font-weight: 600
-
-section
-  padding: 6em 0
+  font-size: 1em
+  line-height: 1.5em
 
 .wrapper
   max-width: $max-width
   margin: 0 auto
   padding: 0 32px
 
-#rise
-  background-color: $night-blue
-  text-align: center
-  color: $white
+  & > div
+    padding: 6em 0
+
+#principles
+  ul
+    list-style-type: none
+    padding: 0
+
+    li
+      position: relative
+      margin-bottom: 4em
+      padding-left: 4.5em
+
+      .image
+        width: 48px
+        height: 48px
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        border-radius: 6px
+        background-repeat: no-repeat
+        background-position: center
+
+#cta
+  h2
+    text-align: center

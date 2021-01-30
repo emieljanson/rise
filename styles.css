@@ -2,34 +2,75 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #100033;
+  text-rendering: optimizeLegibility;
+  background-image: radial-gradient(circle, #FFCCB2, #A85FE5 30%, #2B0179 60%, #100033);
+  background-position: 0 1800px;
+  background-repeat: no-repeat;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", serif;
+  color: #fff;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h4 {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #F4B666;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-align: center;
 }
 
 p {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #787A83;
-  font-size: 1.5em;
-  line-height: 1.25em;
-  font-weight: 600;
-}
-p strong {
-  color: #000;
-  font-weight: 600;
-}
-
-section {
-  padding: 6em 0;
+  color: #9292BF;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 .wrapper {
-  max-width: 840px;
+  max-width: 620px;
   margin: 0 auto;
   padding: 0 32px;
 }
+.wrapper > div {
+  padding: 6em 0;
+}
 
-#rise {
-  background-color: #100033;
+#principles ul {
+  list-style-type: none;
+  padding: 0;
+}
+#principles ul li {
+  position: relative;
+  margin-bottom: 4em;
+  padding-left: 4.5em;
+}
+#principles ul li .image {
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#cta h2 {
   text-align: center;
-  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */
