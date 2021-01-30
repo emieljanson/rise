@@ -4,7 +4,7 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #100033;
   text-rendering: optimizeLegibility;
-  background-image: radial-gradient(circle, #FFCCB2, #A85FE5 30%, #2B0179 60%, #100033);
+  background-image: radial-gradient(circle, #ffccb2, #a85fe5 30%, rgba(43, 1, 121, 0) 60%, rgba(16, 0, 51, 0));
   background-position: 0 1800px;
   background-repeat: no-repeat;
 }
