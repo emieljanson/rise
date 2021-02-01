@@ -65,11 +65,6 @@ p
   font-size: 1.125em
   line-height: 1.5em
 
-  strong
-    color: $white
-    font-weight: 500
-    opacity: 0.85
-
 .wrapper
   max-width: $max-width
   margin: 0 auto
@@ -103,7 +98,7 @@ p
         height: 48px
         display: block
         position: absolute
-        top: 0
+        top: 8px
         left: 0
         border-radius: 6px
         background-repeat: no-repeat
@@ -155,3 +150,30 @@ p
       padding: 0em 2em
       cursor: pointer
       margin: 0
+
+  #signatures
+    display: flex
+
+    a
+      text-decoration: none
+      text-align: left
+      max-width: 280px
+
+      &:first-child
+        margin-right: 3em
+
+      .sign
+        height: 72px
+        background-size: contain
+        background-repeat: no-repeat
+
+      h5
+        color: $white
+        font-size: 1.125em
+        font-weight: 500
+        margin: 1em 0 .5em 0
+
+      p
+        font-size: 0.875em
+        color: #DDC9EA
+        margin: 0

@@ -51,11 +51,6 @@ p {
   font-size: 1.125em;
   line-height: 1.5em;
 }
-p strong {
-  color: #fff;
-  font-weight: 500;
-  opacity: 0.85;
-}
 
 .wrapper {
   max-width: 620px;
@@ -92,7 +87,7 @@ p strong {
   height: 48px;
   display: block;
   position: absolute;
-  top: 0;
+  top: 8px;
   left: 0;
   border-radius: 6px;
   background-repeat: no-repeat;
@@ -144,6 +139,33 @@ p strong {
   background-color: #100033;
   padding: 0em 2em;
   cursor: pointer;
+  margin: 0;
+}
+#cta #signatures {
+  display: flex;
+}
+#cta #signatures a {
+  text-decoration: none;
+  text-align: left;
+  max-width: 280px;
+}
+#cta #signatures a:first-child {
+  margin-right: 3em;
+}
+#cta #signatures a .sign {
+  height: 72px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#cta #signatures a h5 {
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 500;
+  margin: 1em 0 0.5em 0;
+}
+#cta #signatures a p {
+  font-size: 0.875em;
+  color: #DDC9EA;
   margin: 0;
 }
 
