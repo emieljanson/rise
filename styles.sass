@@ -5,6 +5,7 @@ $white: #fff
 $laguna: #F4B666
 
 $gray-5: #9292BF
+$gray-3: #A6A6B5
 
 $night-blue: #100033
 
@@ -21,6 +22,8 @@ html, body
   font-family: $body-font
   background-color: $night-blue
   text-rendering: optimizeLegibility
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
   background-image: radial-gradient(circle, rgba(255,204,178,1), rgba(168,95,229,1) 30%, rgba(43,1,121,0) 60%, rgba(16,0,51,0))
   background-position: 0 1800px
   background-repeat: no-repeat
@@ -47,7 +50,7 @@ h4
 p
   font-family: $body-font
   color: $gray-5
-  font-size: 1em
+  font-size: 1.125em
   line-height: 1.5em
 
 .wrapper
@@ -80,5 +83,42 @@ p
         background-position: center
 
 #cta
-  h2
-    text-align: center
+  text-align: center
+
+  #formshadowcontainer
+    display: inline-block
+
+  form
+    display: flex
+    justify-content: center
+    border-radius: 6px
+    box-shadow: 0px 4px 10px rgba(16, 0, 51, 0.2)
+
+    input
+      height: 54px
+      border: none
+      outline: none
+      border-radius: 6px 0px 0px 6px
+      caret-color: $laguna
+      color: $night-blue
+      font-family: $body-font
+      font-size: 1.125em
+      padding: 0em 1em
+      margin: 0
+
+      &::placeholder
+        color: $gray-3
+
+    button
+      height: 54px
+      border: none
+      outline: none
+      border-radius: 0px 6px 6px 0px
+      font-family: $body-font
+      font-weight: 600
+      color: $white
+      font-size: 1.125em
+      background-color: $night-blue
+      padding: 0em 2em
+      cursor: pointer
+      margin: 0
