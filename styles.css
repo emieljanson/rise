@@ -6,8 +6,7 @@ html, body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-image: radial-gradient(circle, #ffccb2, #a85fe5 30%, rgba(43, 1, 121, 0) 60%, rgba(16, 0, 51, 0));
-  background-position: 0 1800px;
+  background-image: radial-gradient(circle at left top, #1F0057, transparent 60%), radial-gradient(circle at 90% 40%, #3F273D, transparent 40%), radial-gradient(circle at 20% 70%, #360F4C, transparent 40%), radial-gradient(circle at center 120%, #ffccb2, #a85fe5, #2b0179, transparent 30%);
   background-repeat: no-repeat;
 }
 
@@ -39,6 +38,15 @@ p {
   color: #9292BF;
   font-size: 1.125em;
   line-height: 1.5em;
+}
+
+.gradient4 {
+  position: relative;
+  height: 120%;
+  width: 100%;
+  background-image: radial-gradient(circle closest-side at bottom, #ffccb2, #a85fe5 30%, #2b0179 60%, rgba(16, 0, 51, 0) 90%);
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 .wrapper {
