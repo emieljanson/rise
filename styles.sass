@@ -8,6 +8,7 @@ $gray-5: #9292BF
 $gray-3: #A6A6B5
 
 $night-blue: #100033
+$ocean-blue: #3A97F4
 
 // Font stack
 $body-font: -apple-system, BlinkMacSystemFont, sans-serif
@@ -18,7 +19,7 @@ $max-width: 620px
 
 html, body
   margin: 0
-  padding: 0
+  padding: 0 4em
   font-family: $body-font
   background-color: $night-blue
   text-rendering: optimizeLegibility
@@ -52,6 +53,11 @@ p
   font-size: 1.125em
   line-height: 1.5em
 
+  strong
+    color: $white
+    font-weight: 500
+    opacity: 0.85
+
 .gradient4
   position: relative
   height: 120%
@@ -66,7 +72,17 @@ p
   padding: 0 32px
 
   & > div
-    padding: 6em 0
+    padding: 12em 0
+
+#intro
+  margin-top: 8em
+
+  .tagline
+    color: $ocean-blue
+    text-align: left
+
+#header
+  padding: 0
 
 #principles
   ul
@@ -75,7 +91,7 @@ p
 
     li
       position: relative
-      margin-bottom: 4em
+      margin-bottom: 12em
       padding-left: 4.5em
 
       .image
@@ -89,17 +105,22 @@ p
         background-repeat: no-repeat
         background-position: center
 
+      &:last-child
+        margin-bottom: 0
+
 #cta
   text-align: center
 
   #formshadowcontainer
     display: inline-block
+    margin-top: 2em
 
   form
     display: flex
     justify-content: center
     border-radius: 6px
     box-shadow: 0px 4px 10px rgba(16, 0, 51, 0.2)
+    margin-bottom: 8em
 
     input
       height: 54px
