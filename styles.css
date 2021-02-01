@@ -31,9 +31,19 @@ h1, h2, h3 {
 h1 {
   font-size: 3.5em;
 }
+@media (max-width: 425px) {
+  h1 {
+    font-size: 2em;
+  }
+}
 
 h2 {
   font-size: 2.5em;
+}
+@media (max-width: 425px) {
+  h2 {
+    font-size: 1.5em;
+  }
 }
 
 h4 {
@@ -64,6 +74,11 @@ p {
 #intro {
   margin-top: 8em;
 }
+@media (max-width: 425px) {
+  #intro {
+    margin-top: 0;
+  }
+}
 #intro .tagline {
   color: #3A97F4;
   text-align: left;
@@ -82,6 +97,11 @@ p {
   margin-bottom: 12em;
   padding-left: 4.5em;
 }
+@media (max-width: 425px) {
+  #principles ul li {
+    padding-left: 0;
+  }
+}
 #principles ul li .image {
   width: 48px;
   height: 48px;
@@ -92,6 +112,11 @@ p {
   border-radius: 6px;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media (max-width: 425px) {
+  #principles ul li .image {
+    top: -64px;
+  }
 }
 #principles ul li:last-child {
   margin-bottom: 0;

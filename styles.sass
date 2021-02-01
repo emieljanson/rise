@@ -7,6 +7,9 @@
   font-weight: normal
   font-style: normal
 
+//Breakpoints
+$mobileL: 425px
+
 
 // Colors
 $black: #000
@@ -48,8 +51,14 @@ h1, h2, h3
 h1
   font-size: 3.5em
 
+  @media (max-width: $mobileL)
+    font-size: 2em
+
 h2
   font-size: 2.5em
+
+  @media (max-width: $mobileL)
+    font-size: 1.5em
 
 h4
   font-family: $body-font
@@ -76,6 +85,9 @@ p
 #intro
   margin-top: 8em
 
+  @media (max-width: $mobileL)
+    margin-top: 0
+
   .tagline
     color: $ocean-blue
     text-align: left
@@ -93,6 +105,9 @@ p
       margin-bottom: 12em
       padding-left: 4.5em
 
+      @media (max-width: $mobileL)
+        padding-left: 0
+
       .image
         width: 48px
         height: 48px
@@ -103,6 +118,9 @@ p
         border-radius: 6px
         background-repeat: no-repeat
         background-position: center
+
+        @media (max-width: $mobileL)
+          top: -64px
 
       &:last-child
         margin-bottom: 0
