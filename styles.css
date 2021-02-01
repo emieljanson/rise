@@ -143,6 +143,7 @@ p {
 }
 #cta #signatures {
   display: flex;
+  margin-top: 2em;
 }
 #cta #signatures a {
   text-decoration: none;
@@ -151,6 +152,9 @@ p {
 }
 #cta #signatures a:first-child {
   margin-right: 3em;
+}
+#cta #signatures a:hover p {
+  color: #fff;
 }
 #cta #signatures a .sign {
   height: 72px;
