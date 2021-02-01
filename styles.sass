@@ -1,3 +1,13 @@
+@font-face
+  font-family: Burgess
+  src: url('fonts/burgess-regular.eot')
+  src: url('fonts/burgess-regular.eot?') format('☺')
+  src: url('fonts/burgess-regular.woff') format('woff')
+  src: url('fonts/burgess-regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+
 // Colors
 $black: #000
 $white: #fff
@@ -12,14 +22,14 @@ $ocean-blue: #3A97F4
 
 // Font stack
 $body-font: -apple-system, BlinkMacSystemFont, sans-serif
-$title-font: 'Merriweather', serif
+$title-font: Burgess, -apple-system-ui-serif, ui-serif, 'Merriweather', serif
 
 // Breakpoints
 $max-width: 620px
 
 html, body
   margin: 0
-  padding: 0 4em
+  padding: 0
   font-family: $body-font
   background-color: $night-blue
   text-rendering: optimizeLegibility
@@ -32,12 +42,14 @@ h1, h2, h3
   font-family: $title-font
   color: $white
   font-weight: 300
+  line-height: 1.2em
+  letter-spacing: 0.01em
 
 h1
-  font-size: 3em
+  font-size: 3.5em
 
 h2
-  font-size: 2em
+  font-size: 2.5em
 
 h4
   font-family: $body-font
@@ -57,14 +69,6 @@ p
     color: $white
     font-weight: 500
     opacity: 0.85
-
-.gradient4
-  position: relative
-  height: 120%
-  width: 100%
-  background-image: radial-gradient(circle closest-side at bottom, #ffccb2, #a85fe5 30%, #2b0179 60%, rgba(16, 0, 51, 0) 90%)
-  background-position: bottom center
-  background-repeat: no-repeat
 
 .wrapper
   max-width: $max-width
@@ -110,6 +114,7 @@ p
 
 #cta
   text-align: center
+  padding-top: 8em
 
   #formshadowcontainer
     display: inline-block
