@@ -87,6 +87,11 @@ p {
 #header {
   padding: 0;
 }
+@media (max-width: 425px) {
+  #header {
+    margin: -5em 0;
+  }
+}
 
 #principles ul {
   list-style-type: none;
@@ -125,6 +130,11 @@ p {
 #cta {
   text-align: center;
   padding-top: 8em;
+}
+@media (max-width: 425px) {
+  #cta {
+    padding-top: 0;
+  }
 }
 #cta #formshadowcontainer {
   display: inline-block;
