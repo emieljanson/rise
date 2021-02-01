@@ -7,17 +7,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="gradient1"></div>
+
   <div class="gradient2"></div>
   <div class="gradient3"></div>
 
   <div class="wrapper">
-    <div id=intro>
+    <div data-aos="fade-up" id=intro>
       <h1>We’re building a calendar. Here’s why:</h1>
       <p>We all have a thousand things we want in life. Meanwhile, people are pulling strings to get a slice of your time. And while time is easy to spend, it’s impossible to get extra. What’s gone is gone.</p>
       <p>As a fix, we’re using to-do lists to write down what we want. A to-do list is very patient. And its infinity is comforting: there’s time! Only later we find out that actually our time is limited. Very limited.</p>
@@ -31,31 +34,31 @@
 
     <div id="principles">
       <ul>
-        <li>
+        <li data-aos="fade-up">
           <div style="background-image: url('img/icon1.svg'); background-color:rgba(244,182,102,0.25)" class="image"></div>
           <h2>Your calendar should be the centerpiece of your work</h2>
           <p>Here’s our core belief: whatever is next on your plate, it should be on your schedule. Using your calendar for work is really powerful: it forces you to decide when a task will be worked on and it clearly communicates when you’re fully booked. This complete overview allows you to make better informed decisions about how you spend your time. Rise is a calendar and task manager in one.</p>
         </li>
 
-        <li>
+        <li data-aos="fade-up">
           <div style="background-image: url('img/icon2.svg'); background-color:rgba(250,55,208,0.15)" class="image"></div>
           <h2>Your calendar should help you have more uninterrupted time to do actual work</h2>
           <p>We’re building Rise with the maker in mind: people who create stuff for a living. As a maker, you can only do great work when you have long stretches of uninterrupted time. Rise will help you have more time to make, automatically.</p>
         </li>
 
-        <li>
+        <li data-aos="fade-up">
           <div style="background-image: url('img/icon3.svg'); background-color:rgba(55,250,215,0.15)" class="image"></div>
           <h2>Your calendar should help you discover your ideal weekly rhythm</h2>
           <p>In a calendar, each hour and each day are looking the same. So it’s easy to assume that any time works for any activity. Which obviously is not true: if you’re a night owl, a brainstorming session at 9am on a Monday probably won’t work. We believe your calendar should help you figure out your ideal weekly rhythm, and help you make the most of it.</p>
         </li>
 
-        <li>
+        <li data-aos="fade-up">
           <div style="background-image: url('img/icon4.svg'); background-color:rgba(250,55,190,0.15)" class="image"></div>
           <h2>Your calendar should help you set and complete goals</h2>
           <p>Setting goals force you to think about what you want to achieve. Your goals shape the way you spend your time. Or at least: they should. That’s why Rise will help you get into the habit of setting goals and make sure to keep them visible.</p>
         </li>
 
-        <li>
+        <li data-aos="fade-up">
           <div style="background-image: url('img/icon5.svg'); background-color:rgba(55,171,250,0.15)" class="image"></div>
           <h2>Your calendar should allow you to forget about the time</h2>
           <p>You know how Presidents and executives manage to be fully present for the extent of a 30 minute meeting? They never spend time thinking about when to leave, what time it is or how long they have until the meeting ends. They have people to guide them through their day.</p>
@@ -78,6 +81,10 @@
     </div>
     <div class="gradient4"></div>
   </div>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

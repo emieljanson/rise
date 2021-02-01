@@ -6,7 +6,7 @@ html, body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-image: radial-gradient(circle at left top, #1F0057, transparent 60%), radial-gradient(circle at 90% 40%, #3F273D, transparent 40%), radial-gradient(circle at 20% 70%, #360F4C, transparent 40%), radial-gradient(circle at center 120%, #ffccb2, #a85fe5, #2b0179, transparent 30%);
+  background-image: radial-gradient(circle at left top, #1F0057, transparent 50%), radial-gradient(circle at 90% 40%, #3F273D, transparent 40%), radial-gradient(circle at 20% 70%, #360F4C, transparent 40%), radial-gradient(circle at center 110%, #ffccb2 6%, #a85fe5, #2b0179, transparent 40%);
   background-repeat: no-repeat;
 }
 
