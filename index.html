@@ -97,62 +97,7 @@
           <h5>Emiel Janson</h5>
           <p>Designer who created digital products that are used by millions of people.</p>
         </a>
-
-        <div class="team">
-        </div>
       </div>
     </div>
-
-<<<<<<< HEAD
-    <div class="footer form">
-      <form action="https://emiel.createsend.com/t/j/s/etruhy/" method="post" id="subFormBottom">
-        <input id="fieldEmailBottom" name="cm-etruhy-etruhy" type="email" placeholder="Jouw email" required>
-        <button type="submit" id="submitButtonBottom"> <div class="checkmark draw"></div>Aanmelden</button>
-      </form>
-      <div class="credits">
-        Gemaakt door <a href="http://www.twitter.com/emieljanson">Emiel Janson</a>, zelf ook freelancer. Allemaal volledig gratis.
-      </div>
-    </div>
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-    <script type="text/javascript">
-        $(function () {
-            $('#subFormBottom').submit(function (e) {
-                e.preventDefault();
-                $.getJSON(
-                this.action + "?callback=?",
-                $(this).serialize(),
-                function (data) {
-                    if (data.Status === 400) {
-                        alert("Error: " + data.Message);
-                    } else { // 200
-
-                      $( "button" ).animate({
-                        backgroundColor: "#78D3FF",
-                        color: "#78D3FF",
-                      }, 200, 'easeInOutCubic' );
-
-                      setTimeout(function () {
-                        $(".checkmark").css("display", "block");
-                        $('input').val("Bedankt, je staat op de lijst").fadeIn("slow");
-                        fbq('track', 'CompleteRegistration');
-                      }, 300);
-                    }
-                });
-            });
-        });
-    </script>
-
-
-
-
-
-  </body>
-=======
-  </div>
->>>>>>> parent of d9ffc25... Update index.html
+</body>
 </html>
