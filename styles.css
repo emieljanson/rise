@@ -83,6 +83,10 @@ p {
   color: #3A97F4;
   text-align: left;
 }
+#intro .why {
+  font-size: 1.375em;
+  font-weight: 600;
+}
 
 #header {
   padding: 0;
