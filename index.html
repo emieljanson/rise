@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Rise Manifesto</title>
+  <title>Rise Calendar Manifesto</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="img/favicon.ico">
 
@@ -22,9 +22,9 @@
 <body>
   <div class="wrapper">
     <div id=intro>
-      <h4 class="tagline">The Rise Manifesto</h4>
+      <h4 class="tagline">The Rise Calendar Manifesto</h4>
       <h1>Rise gives you clarity, direction and peace of mind. Got a minute?</h1>
-      <p class="why">We’re combining award-winning design and the best ideas from the author of bestseller GRIP into a next-generation calendar.</p>
+      <p class="why">We’ve set out to build a next generation calendar by combining the best ideas from bestseller GRIP with world class and internationally praised design.</p>
       <p>We all have a thousand things we want in life. Meanwhile, people are pulling strings to get a slice of your time. And while time is easy to spend, it’s impossible to get extra. What’s gone is gone.</p>
       <p>And so after a busy day with work, calls and emails, it can be hard to answer the question: ‘what did you <em>really</em> do today?’</p>
       <p>As a fix, we’re using to-do lists to write down what we want. A to-do list is very patient. And its infinity is comforting: there’s time! Only later we find out that actually our time is limited.</p>
@@ -77,23 +77,31 @@
     </div>
 
     <div id="cta">
-      <h4 class="tagline">Stay in the loop</h4>
-      <h2>Want to be the first to hear news about Rise?</h2>
-      <div id="formshadowcontainer">
-        <form name="subscribe" method="POST" data-netlify="true" id="subscribe">
-          <input type="email" name="email" placeholder="Email address"/>
-          <button type="submit">Send</button>
-        </form>
+      <div id="subscribe">
+        <h4 class="tagline">Stay in the loop</h4>
+        <h2>Want to be the first to hear news about Rise?</h2>
+        <div id="formshadowcontainer">
+          <form name="subscribe" method="POST" data-netlify="true" id="subscribe">
+            <input type="email" name="email" placeholder="Email address"/>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="success">
+        <h4 class="tagline">Thank you</h4>
+        <h2>Great, you're on the list.</h2>
+        <p>You'll be among the first to know when you can get your hands on Rise. Until then, follow our journey <a href="http://www.twitter.com/risecal" target="_blank">on Twitter</a>.</p>
       </div>
 
       <div id="signatures">
-        <a class="team" href="http://www.twitter.com/rickpastoor">
+        <a class="team" href="http://www.twitter.com/rickpastoor" target="_blank">
           <div class="sign" style="background-image:url('img/signaturerick.png')"></div>
           <h5>Rick Pastoor</h5>
           <p>Wrote GRIP, a bestselling book that teaches you how to work and make the most of your time.</p>
         </a>
 
-        <a class="team" href="http://www.twitter.com/emieljanson">
+        <a class="team" href="http://www.twitter.com/emieljanson" target="_blank">
           <div class="sign" style="background-image:url('img/signatureemiel.png')"></div>
           <h5>Emiel Janson</h5>
           <p>Designer who created digital products that are used by millions of people.</p>
@@ -114,7 +122,8 @@
   })
   .then(() =>
     console.log('Form successfully submitted');
-    console.log('Form 2'))
+    $('#subscribe').css("display" , "none");
+    $('#success').css("display" , "block")
   .catch((error) =>
     alert(error))
   }

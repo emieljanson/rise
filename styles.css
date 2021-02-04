@@ -185,6 +185,20 @@ p {
 #cta form button:hover {
   background-color: #1F0063;
 }
+#cta #success {
+  display: none;
+  margin-bottom: 8em;
+}
+#cta #success p {
+  color: #DDC9EA;
+}
+#cta #success a {
+  text-decoration: none;
+  color: #fff;
+}
+#cta #success a:hover {
+  text-decoration: underline;
+}
 #cta #signatures {
   display: flex;
   margin-top: 2em;
