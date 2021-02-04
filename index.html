@@ -121,9 +121,7 @@
     body: new URLSearchParams(formData).toString()
   })
   .then(() =>
-    console.log('Form successfully submitted');
-    $('#subscribe').css('display', 'none');
-    $('#success').css('display', 'block'))
+    console.log('Form successfully submitted').$('#subscribe').css('display', 'none').$('#success').css('display', 'block'))
   .catch((error) =>
     alert(error))
   }
