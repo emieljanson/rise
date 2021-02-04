@@ -81,7 +81,7 @@
       <h2>Want to be the first to hear news about Rise?</h2>
       <div id="formshadowcontainer">
         <form name="subscribe" method="POST" data-netlify="true" onSubmit={this.handleSubmit}>
-          <input type="hidden" name="form-name" value="Emailsubs" />
+          <input type="hidden" name="subscribe" value="Emailsubs" />
           <input type="email" name="email" placeholder="E-mail address"/>
           <button type="submit">Send</button>
         </form>
@@ -116,7 +116,7 @@
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: encode({
-      "form-name": event.target.getAttribute("name"),
+      "form-name": event.target.getAttribute("subscribe"),
       ...name
     })
   }).then(() => console.log('Form successfully submitted')).catch(error => alert(error))
