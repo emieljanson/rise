@@ -81,7 +81,7 @@
         <h4 class="tagline">Stay in the loop</h4>
         <h2>Want to be the first to hear news about Rise?</h2>
         <div id="formshadowcontainer">
-          <form name="subscribe" method="POST" data-netlify="true" id="subscribe">
+          <form name="subscribe" method="POST" data-netlify="true" id="subscribeform">
             <input type="email" name="email" placeholder="Email address"/>
             <button type="submit">Send</button>
           </form>
@@ -113,7 +113,7 @@
 <script type="text/javascript">
   const handleSubmit = (e) => {
   e.preventDefault()
-  let myForm = document.getElementById('subscribe');
+  let myForm = document.getElementById('subscribeform');
   let formData = new FormData(myForm)
   fetch('/', {
     method: 'POST',
@@ -126,6 +126,6 @@
     alert(error))
   }
 
-  document.getElementById('subscribe').addEventListener("submit", handleSubmit);
+  document.getElementById('subscribeform').addEventListener("submit", handleSubmit);
 </script>
 </html>
