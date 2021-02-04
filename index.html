@@ -113,10 +113,7 @@
     body: new URLSearchParams(formData).toString()
   })
   .then(() =>
-    $("button").animate({
-      backgroundColor: "#78D3FF",
-      color: "#78D3FF",
-    }, 200, 'easeInOutCubic');
+    console.log('Form successfully submitted')
   )
   .catch((error) =>
     alert(error))
