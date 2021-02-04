@@ -111,7 +111,14 @@
     method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString()
-  }).then(() => console.log('Form successfully submitted')).catch((error) =>
+  })
+  .then(() => console.log('Form successfully submitted');
+    $("button").animate({
+      backgroundColor: "#78D3FF",
+      color: "#78D3FF",
+    }, 200, 'easeInOutCubic');
+  )
+  .catch((error) =>
     alert(error))
   }
 
