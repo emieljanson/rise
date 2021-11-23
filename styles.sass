@@ -1,12 +1,3 @@
-@font-face
-  font-family: Burgess
-  src: url('fonts/burgess-regular.eot')
-  src: url('fonts/burgess-regular.eot?') format('☺')
-  src: url('fonts/burgess-regular.woff') format('woff')
-  src: url('fonts/burgess-regular.ttf') format('truetype')
-  font-weight: normal
-  font-style: normal
-
 //Breakpoints
 $mobileL: 425px
 
@@ -19,13 +10,12 @@ $laguna: #F4B666
 $gray-5: #9292BF
 $gray-3: #A6A6B5
 
-$night-blue: #100033
+$primary: #017AFF
 $night-blue-light: #1F0063
 $ocean-blue: #3A97F4
 
 // Font stack
 $body-font: -apple-system, BlinkMacSystemFont, sans-serif
-$title-font: Burgess, -apple-system-ui-serif, ui-serif, 'Merriweather', serif
 
 // Breakpoints
 $max-width: 620px
@@ -34,17 +24,41 @@ html, body
   margin: 0
   padding: 0
   font-family: $body-font
-  background-color: $night-blue
+  background-color: black
   text-rendering: optimizeLegibility
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
-  background-image: radial-gradient(circle at left top, #1F0057, transparent 50%), radial-gradient(circle at 90% 40%, #3F273D, transparent 40%), radial-gradient(circle at 20% 70%, #360F4C, transparent 40%), radial-gradient(circle at center 110%, #ffccb2 6%, #a85fe5, #2b0179, transparent 40%)
+  background-image: url(img/lines.svg)
   background-repeat: no-repeat
+  background-position-y: -480px
+  background-size: cover
+  height: 100%
+
+  &:before
+    position: absolute
+    content: ''
+    height: 100%
+    width: 100%
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1), rgba(0, 0, 0, .4), rgba(0, 0, 0, .6), rgba(0, 0, 0, .5), rgba(0, 0, 0, .1), rgba(0, 0, 0, .4), rgba(0, 0, 0, .6))
+    background-size: 200% 200%
+    background-position: 0% 100%
+    animation-name: highlight
+    animation-duration: 5s
+    animation-iteration-count: infinite
+    animation-timing-function: ease
+    animation-direction: alternate
+
+@keyframes highlight
+  from
+    background-position: 0% 100%
+  to
+    background-position: 100% 0%
+
 
 h1, h2, h3
-  font-family: $title-font
+  font-family: $body-font
   color: $white
-  font-weight: 300
+  font-weight: 700
   line-height: 1.2em
   letter-spacing: 0.01em
 
@@ -56,6 +70,7 @@ h1
 
 h2
   font-size: 2.5em
+  text-shadow: 0px 0px 35px black
 
   @media (max-width: $mobileL)
     font-size: 2em
@@ -77,67 +92,15 @@ p
 .wrapper
   max-width: $max-width
   margin: 0 auto
-  padding: 0 32px
-
-  & > div
-    padding: 12em 0
-
-#intro
-  margin-top: 8em
-
-  @media (max-width: $mobileL)
-    margin-top: 0
-
-  .tagline
-    color: $ocean-blue
-    text-align: left
-
-  .why
-    font-size: 1.375em
-    font-weight: 600
-
-#header
-  padding: 0
-
-  @media (max-width: $mobileL)
-    margin: -5em 0
-
-#principles
-  ul
-    list-style-type: none
-    padding: 0
-
-    li
-      position: relative
-      margin-bottom: 12em
-      padding-left: 4.5em
-
-      @media (max-width: $mobileL)
-        padding-left: 0
-
-      .image
-        width: 48px
-        height: 48px
-        display: block
-        position: absolute
-        top: 8px
-        left: 0
-        border-radius: 6px
-        background-repeat: no-repeat
-        background-position: center
-
-        @media (max-width: $mobileL)
-          top: -64px
-
-      &:last-child
-        margin-bottom: 0
+  min-height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
 
 #cta
   text-align: center
-  padding-top: 8em
-
-  @media (max-width: $mobileL)
-    padding-top: 0
+  padding: 32px
+  z-index: 2
 
   #formshadowcontainer
     display: inline-block
@@ -148,7 +111,6 @@ p
     justify-content: center
     border-radius: 6px
     box-shadow: 0px 4px 10px rgba(16, 0, 51, 0.2)
-    margin-bottom: 8em
 
     input
       height: 54px
@@ -158,7 +120,7 @@ p
       min-width: 100px
       border-radius: 6px 0px 0px 6px
       caret-color: $laguna
-      color: $night-blue
+      color: black
       font-family: $body-font
       font-size: 1.125em
       padding: 0em 1em
@@ -176,17 +138,16 @@ p
       font-weight: 600
       color: $white
       font-size: 1.125em
-      background-color: $night-blue
+      background-color: $primary
       padding: 0em 2em
       cursor: pointer
       margin: 0
 
       &:hover
-        background-color: $night-blue-light
+        background-color: #AE01FF
 
   #success
     display: none
-    margin-bottom: 8em
 
     p
       color: #DDC9EA
@@ -196,36 +157,3 @@ p
 
       &:hover
         text-decoration: underline
-
-
-  #signatures
-    display: flex
-    margin-top: 2em
-
-    a
-      text-decoration: none
-      text-align: left
-      max-width: 280px
-
-      &:first-child
-        margin-right: 3em
-
-      &:hover
-        p
-          color: $white
-
-      .sign
-        height: 72px
-        background-size: contain
-        background-repeat: no-repeat
-
-      h5
-        color: $white
-        font-size: 1.125em
-        font-weight: 500
-        margin: 1em 0 .5em 0
-
-      p
-        font-size: 0.875em
-        color: #DDC9EA
-        margin: 0
