@@ -12,6 +12,11 @@ html, body {
   background-size: cover;
   height: 100%;
 }
+@media (max-width: 425px) {
+  html, body {
+    background-size: 270%;
+  }
+}
 html:before, body:before {
   position: absolute;
   content: "";
@@ -140,7 +145,7 @@ p {
   display: none;
 }
 #cta #success p {
-  color: #DDC9EA;
+  color: #A6A6B5;
 }
 #cta #success a {
   text-decoration: none;
