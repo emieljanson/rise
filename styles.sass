@@ -34,6 +34,9 @@ html, body
   background-size: cover
   height: 100%
 
+  @media (max-width: $mobileL)
+    background-size: 270%
+
   &:before
     position: absolute
     content: ''
@@ -150,7 +153,7 @@ p
     display: none
 
     p
-      color: #DDC9EA
+      color: $gray-3
     a
       text-decoration: none
       color: $white
