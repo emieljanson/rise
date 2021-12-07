@@ -1,0 +1,390 @@
+@import "common.sass"
+
+//General
+
+body
+  font-family: $typeface-primary
+  font-size: 18px
+  color: $purple-100
+  margin: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility
+  background: linear-gradient(180deg, rgba(4, 1, 27, 0.6) 0%, rgba(0, 0, 0, 0) 80px), url(img/lines-top-animated.svg) no-repeat, $purple-900
+  //Enable GPU
+  transform: translate3d(0,0,0)
+
+.wrapper
+  max-width: $maxWidth
+  margin: 0 auto
+
+h1
+  font-weight: 800
+  color: $white
+  font-size: 62px
+
+h2
+  font-weight: 800
+  color: $white
+  font-size: 48px
+
+h3
+  font-weight: 700
+  color: $white
+  font-size: 28px
+  margin-bottom: 16px
+
+h4
+  font-weight: 700
+  color: $white
+  font-size: 22px
+  margin-bottom: 16px
+
+h5
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: 4px
+  font-size: 16px
+
+p
+  line-height: 140%
+
+  &.subtitle
+    font-size: 21px
+
+a
+  text-decoration: none
+  color: $purple-100
+
+  &:hover
+    color: $white
+
+button
+  padding: 8px 16px
+  background-color: $primary
+  border-radius: 6px
+  border: 0
+  outline: 0
+  font-size: 16px
+  font-family: $typeface-primary
+  font-weight: 500
+  color: $white
+  cursor: pointer
+  box-shadow: $elevation-300
+
+  &.big
+    padding: 20px 24px
+    font-size: 18px
+
+//Sections
+
+.menu
+  position: sticky
+  top: 0
+  z-index: 9
+
+  &.active
+    box-shadow: 0px 1px #1F1C39
+    backdrop-filter: blur(8px)
+    background-color: #04001ED9
+    transition: box-shadow 0.5s ease
+
+  .menu-container
+    display: flex
+    align-items: center
+    align-content: space-between
+    justify-content: space-between
+
+    .logo-container
+      display: flex
+      font-weight: 700
+      color: $white
+      font-size: 28px
+
+      .logo
+        margin-right: 8px
+
+    .menu-content
+      display: flex
+      font-weight: 500
+      font-size: 16px
+
+      ul
+        list-style: none
+        display: flex
+        align-items: center
+
+        li
+          display: inline-block
+          margin-left: 32px
+
+        #badge
+          background-color: $red-200
+          color: $purple-900
+          border-radius: 100%
+          font-size: 14px
+          width: 24px
+          line-height: 24px
+          text-align: center
+          display: inline-block
+          margin-left: 4px
+
+.header
+  text-align: center
+  margin-top: 240px
+  margin-bottom: -400px
+
+  h1
+    max-width: 880px
+    margin: 0 auto
+    margin-bottom: 24px
+    transform: translateY(20px)
+    opacity: 0
+
+  p
+    font-size: 26px
+    max-width: 640px
+    margin: 0 auto
+    margin-bottom: 64px
+    transform: translateY(20px)
+    opacity: 0
+
+  button
+    transform: translateY(10px)
+    opacity: 0
+
+  &.animate
+    h1
+      transform: translateY(0px)
+      opacity: 1
+      transition: all .5s ease-out
+
+    p
+      transform: translateY(0px)
+      opacity: 1
+      transition: all .5s .3s ease-out
+
+    button
+      transform: translateY(0px)
+      opacity: 1
+      transition: all .5s .5s ease-out
+
+.signup
+  background-color: $purple-400
+  padding: 48px
+  border-radius: 12px
+  box-sizing: border-box
+  margin-bottom: 120px
+  background-image: url(img/dotted-bottom.svg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: right bottom
+
+  h2
+    margin: 16px 0 0 0
+
+  h5
+    margin: 40px 0 0 0
+    color: #D8D2FF
+
+.footer
+  font-size: 14px
+  font-weight: 500
+  border-top: 1px solid #1F1C39
+  padding: 12px 0
+
+  .menu-container
+    display: flex
+    align-items: center
+    align-content: space-between
+    justify-content: space-between
+
+    .menu-content
+      display: flex
+
+
+      ul
+        list-style: none
+        display: flex
+        align-items: center
+
+        li
+          display: inline-block
+          margin-left: 32px
+
+        #badge
+          background-color: $red-200
+          color: $purple-900
+          border-radius: 100%
+          font-size: 14px
+          width: 24px
+          line-height: 24px
+          text-align: center
+          display: inline-block
+          margin-left: 4px
+
+//Pages
+
+.landingpage
+  .visual
+    background: radial-gradient(26.24% 26.37% at 81.6% 66.27%, rgba(190, 155, 254, 0.5) 0%, rgba(188, 153, 253, 0) 100%), radial-gradient(40.63% 30.82% at 19.76% 69.18%, rgba(250, 217, 202, 0.3) 0%, rgba(251, 217, 205, 0) 100%), radial-gradient(48.89% 43.65% at 50% 47.34%, #4F79BF 0%, rgba(86, 122, 195, 0) 100%)
+    margin: 0 auto
+    padding: 496px 0 366px 0
+    opacity: 0
+    background-position: center center
+    background-repeat: no-repeat
+
+    .visual-bg
+      background: radial-gradient(138.06% 105.73% at 0.93% 104.35%, #FFDFC2 0%, #FFD6F7 30.06%, #B391FF 65.62%, #4175B6 100%)
+      border-radius: 12px
+      padding-top: 21px
+      margin: 0 auto
+
+      img
+        margin-bottom: -121px
+        width: 100%
+        transform: translateY(24px) scale(.98) translate3d(0,0,0)
+        opacity: 0
+
+    &.animate
+      // background-size: 100% 100%
+      opacity: 1
+      transition: all 2s ease
+
+      img
+        transform: translateY(0) scale(1)
+        opacity: 1
+        transition: transform .7s .5s ease-out, opacity 0.5s .5s ease-out
+
+  .features-grid
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -12px
+
+    .feature-tile
+      background-color: $purple-800
+      border-radius: 12px
+      padding: 48px
+      margin: 12px
+      height: 480px
+      flex: 1 1 25%
+
+      &.big
+        flex: 4 4 25%
+
+      &.small
+        flex: 1 1 21%
+        height: 240px
+        display: flex
+        justify-content: flex-end
+        flex-direction: column
+
+      h3, h4, p
+        max-width: 440px
+
+      h3, h4
+        margin-top: 0
+
+      p
+        margin: 0
+
+  .features-focus
+    margin-top: -200px
+
+    h2, .subtitle
+      text-align: center
+
+    h2
+      margin-bottom: 24px
+
+    .subtitle
+      margin: 0 auto 80px auto
+      max-width: 480px
+
+    #blueprint
+      background-image: url(img/blueprint.svg)
+      background-repeat: no-repeat
+      background-position: right -12px bottom
+      transform: translate3d(0,0,0)
+
+      &.animate
+        background-position: right bottom
+        transition: all 1s ease-out
+
+    #focusguard
+      background-image: url(img/focusguard.svg)
+      background-repeat: no-repeat
+      background-position: center top 40px
+      display: flex
+      justify-content: flex-end
+      flex-direction: column
+
+    #suggestions
+      background-image: url(img/magic.svg)
+      background-repeat: no-repeat
+      background-position: center top 60px
+      flex: 0.3 0.3 21%
+      height: 440px
+      display: flex
+      justify-content: flex-end
+      flex-direction: column
+      transform: translate3d(0,0,0)
+
+    #fat
+      background: url(img/fat.svg) no-repeat center bottom, url(img/lines-tile.svg) no-repeat bottom / 100% auto, $purple-800
+      height: 440px
+
+    #defrag
+      background-image: url(img/defrag-2.svg)
+      background-repeat: no-repeat
+      background-position: right bottom
+
+    #sync
+      background-image: url(img/calendarsync.svg)
+      background-repeat: no-repeat
+      background-position: center top 8px
+      display: flex
+      justify-content: flex-end
+      flex-direction: column
+
+
+  .features-small
+    display: flex
+    padding: 28px
+
+    .item
+      flex: 1 1 0
+      padding: 20px
+
+  .features-individual
+    margin: 120px auto
+
+    h2
+      text-align: center
+
+    #commandbox
+      background-image: url(img/commandbox.svg)
+      background-repeat: no-repeat
+      background-position: center bottom
+      height: 420px
+
+    #tasks
+      background-image: url(img/focusguard.svg)
+      background-repeat: no-repeat
+      background-position: center top 40px
+      display: flex
+      justify-content: flex-end
+      flex-direction: column
+      height: 420px
+
+.manifest
+  .content
+    &.wrapper
+      max-width: 800px
+      margin: 240px auto
+
+    .title
+      margin-bottom: 80px
+
+      p
+        font-size: 24px

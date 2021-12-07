@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("typefaces/Inter-Regular.woff2?v=3.19") format("woff2"), url("typefaces/Inter-Regular.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("typefaces/Inter-Medium.woff2?v=3.19") format("woff2"), url("typefaces/Inter-Medium.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("typefaces/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("typefaces/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("typefaces/Inter-Bold.woff2?v=3.19") format("woff2"), url("typefaces/Inter-Bold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("typefaces/Inter-ExtraBold.woff2?v=3.19") format("woff2"), url("typefaces/Inter-ExtraBold.woff?v=3.19") format("woff");
+}
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=common.css.map */
