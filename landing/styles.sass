@@ -86,6 +86,7 @@ button
   &.active
     box-shadow: 0px 1px #1F1C39
     backdrop-filter: blur(8px)
+    -webkit-backdrop-filter: blur(8px)
     background-color: #04001ED9
     transition: box-shadow 0.5s ease
 
@@ -120,7 +121,7 @@ button
 
         #badge
           background-color: $red-200
-          color: $purple-900
+          color: $white
           border-radius: 100%
           font-size: 14px
           width: 24px
@@ -133,6 +134,17 @@ button
   text-align: center
   margin-top: 240px
   margin-bottom: -400px
+
+  .announcement
+    border-radius: 80px
+    padding: 8px 16px
+    color: $white
+    background-color: $red-200
+    display: inline-block
+    top: -56px
+    position: relative
+    font-weight: 500
+    font-size: 16px
 
   h1
     max-width: 880px
@@ -237,14 +249,18 @@ button
     .visual-bg
       background: radial-gradient(138.06% 105.73% at 0.93% 104.35%, #FFDFC2 0%, #FFD6F7 30.06%, #B391FF 65.62%, #4175B6 100%)
       border-radius: 12px
-      padding-top: 21px
+      padding: 32px 32px 0 32px
+      box-sizing: border-box
       margin: 0 auto
 
       img
-        margin-bottom: -121px
+        margin-bottom: -44px
         width: 100%
         transform: translateY(24px) scale(.98) translate3d(0,0,0)
         opacity: 0
+        box-shadow: $elevation-400
+        border-radius: 6px
+        box-sizing: border-box
 
     &.animate
       // background-size: 100% 100%
@@ -274,7 +290,7 @@ button
 
       &.small
         flex: 1 1 21%
-        height: 240px
+        height: 200px
         display: flex
         justify-content: flex-end
         flex-direction: column
@@ -302,50 +318,30 @@ button
       max-width: 480px
 
     #blueprint
-      background-image: url(img/blueprint.svg)
-      background-repeat: no-repeat
-      background-position: right -12px bottom
-      transform: translate3d(0,0,0)
-
-      &.animate
-        background-position: right bottom
-        transition: all 1s ease-out
-
-    #focusguard
-      background-image: url(img/focusguard.svg)
-      background-repeat: no-repeat
-      background-position: center top 40px
-      display: flex
-      justify-content: flex-end
-      flex-direction: column
-
-    #suggestions
-      background-image: url(img/magic.svg)
-      background-repeat: no-repeat
-      background-position: center top 60px
-      flex: 0.3 0.3 21%
-      height: 440px
-      display: flex
-      justify-content: flex-end
-      flex-direction: column
-      transform: translate3d(0,0,0)
-
-    #fat
-      background: url(img/fat.svg) no-repeat center bottom, url(img/lines-tile.svg) no-repeat bottom / 100% auto, $purple-800
-      height: 440px
-
-    #defrag
-      background-image: url(img/defrag-2.svg)
+      background-image: url(img/blueprint.png)
       background-repeat: no-repeat
       background-position: right bottom
+      background-size: 665px auto
 
-    #sync
-      background-image: url(img/calendarsync.svg)
-      background-repeat: no-repeat
-      background-position: center top 8px
+    #suggestions
+      background: url(img/suggestions.png) no-repeat center top 56px / 188px auto, url(img/icon-suggestions-bg.svg) no-repeat center top / 100% auto, $purple-800
+      flex: 0.3 0.3 25%
       display: flex
       justify-content: flex-end
       flex-direction: column
+
+    #calendars
+      background-image: url(img/calendars.png)
+      background-repeat: no-repeat
+      background-position: center top 40px
+      background-size: 280px auto
+      flex: 0.3 0.3 25%
+      display: flex
+      justify-content: flex-end
+      flex-direction: column
+
+    #fat
+      background: url(img/fat.png) no-repeat center bottom / 570px auto, url(img/lines-tile.svg) no-repeat bottom / 100% auto, $purple-800
 
 
   .features-small
@@ -363,19 +359,39 @@ button
       text-align: center
 
     #commandbox
-      background-image: url(img/commandbox.svg)
+      background-image: url(img/commandbox.png)
       background-repeat: no-repeat
       background-position: center bottom
+      background-size: 570px auto
       height: 420px
 
     #tasks
-      background-image: url(img/focusguard.svg)
+      background-image: url(img/tasks.png)
       background-repeat: no-repeat
-      background-position: center top 40px
+      background-position: center top 56px
+      background-size: 358px auto
       display: flex
       justify-content: flex-end
       flex-direction: column
       height: 420px
+
+    #joinlinks
+      background-image: url(img/icon-joinlink.svg)
+      background-repeat: no-repeat
+      background-position: left 48px top 64px
+      background-size: auto 64px
+
+    #timetravel
+      background-image: url(img/icon-timetravel.svg)
+      background-repeat: no-repeat
+      background-position: left 48px top 64px
+      background-size: 74px auto
+
+    #availability
+      background-image: url(img/icon-availability.svg)
+      background-repeat: no-repeat
+      background-position: left 48px top 64px
+      background-size: auto 64px
 
 .manifest
   .content

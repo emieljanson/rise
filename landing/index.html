@@ -32,6 +32,9 @@
   </div>
 
   <div class="header wrapper">
+    <div class="announcement">
+        We've raised a $3M pre-seed round led by Lachy Groom &#8594;
+    </div>
     <h1>More time to get stuff done. For you and your team.</h1>
     <p>Rise is a next-generation calendar that protects time to focus and minimizes distractions.</p>
     <button class="big">Request Access</button>
@@ -39,7 +42,7 @@
 
   <div class="visual">
     <div class="visual-bg wrapper">
-      <img src="img/hero.svg"/>
+      <img src="img/rise-calendar.jpg"/>
     </div>
   </div>
 
@@ -53,13 +56,13 @@
         <p>Design your ideal weekly rhythm, and help you make the most of it.</p>
       </div>
 
-      <div class="feature-tile" id="focusguard">
-        <h3>Focusguard protects your most valuable times</h3>
+      <div class="feature-tile" id="suggestions">
+        <h3>Upgrade your week with a single click</h3>
         <p>Protect focustime while still leaving enough space if a colleague needs you on something urgent. Also works great with colleagues who don’t use Rise yet.</p>
       </div>
 
-      <div class="feature-tile" id="suggestions">
-        <h3>Rebalance your week with top suggestions</h3>
+      <div class="feature-tile" id="calendars">
+        <h3>A single calendar for work and everything else</h3>
         <p>Design your ideal weekly rhythm, and help you make the most of it.</p>
       </div>
 
@@ -68,32 +71,23 @@
         <p>Design your ideal weekly rhythm, and help you make the most of it.</p>
       </div>
 
-      <!-- <div class="feature-tile big" id="defrag">
-        <h3>Defragment your time and win back hours of focus time</h3>
-        <p>Design your ideal weekly rhythm, and help you make the most of it.</p>
-      </div>
-
-      <div class="feature-tile" id="sync">
-        <h3>Sync multiple calendars and prevent being overbooked</h3>
-        <p>Protect focustime while still leaving enough space if a colleague needs you on something urgent. Also works great with colleagues who don’t use Rise yet.</p>
-      </div> -->
     </div>
 
     <div class="features-small">
       <div class="item">
-        <img src="img/icon-click.svg" class="icon" alt="Icon Click">
+        <img src="img/icon-click.svg" class="icon">
         <h4>Private event sharing</h4>
         <p>Link all your calendars and never get overbooked.</p>
       </div>
 
       <div class="item">
-        <img src="img/icon-command.svg" class="icon" alt="Icon Click">
+        <img src="img/icon-command.svg" class="icon">
         <h4>Share availability</h4>
         <p>Easily share your availability with anyone outside of your organisation.</p>
       </div>
 
       <div class="item">
-        <img src="img/icon-speed.svg" class="icon" alt="Icon Click">
+        <img src="img/icon-speed.svg" class="icon">
         <h4>Buffers between meetings</h4>
         <p>Automatically add 5 or 10 minutes between meetings.</p>
       </div>
@@ -110,23 +104,23 @@
       </div>
 
       <div class="feature-tile" id="tasks">
-        <h3>Amazing support for tasks</h3>
-        <p>Design your ideal weekly rhythm, and help you make the most of it.</p>
+        <h3>Support for tasks</h3>
+        <p>Track your work, schedule tasks, don't get disturbed and share progress with colleagues.</p>
       </div>
 
-      <div class="feature-tile small">
+      <div class="feature-tile small" id="joinlinks">
         <h4>Join links</h4>
-        <p>Never look for the right link to join your Zoom, Google Meet, Around, Microsoft Teams or WebEx link.</p>
+        <p>Join a meeting with with one click, no more looking for the link.</p>
       </div>
 
-      <div class="feature-tile small">
+      <div class="feature-tile small" id="timetravel">
         <h4>Timetravel</h4>
         <p>Working with someone in another timezone, no problem with Rise.</p>
       </div>
 
-      <div class="feature-tile small">
-        <h4>All your calendars in one place</h4>
-        <p>Add as many calendars to Rise and have a complete overview of your availability.</p>
+      <div class="feature-tile small" id="availability">
+        <h4>Share availability</h4>
+        <p>Easily schedule with people outside of your organization.</p>
       </div>
     </div>
   </div>
@@ -169,10 +163,6 @@ $(window).scroll(function() {
 
     if (scroll >= 160) {
         $(".visual").addClass("animate");
-    }
-
-    if (scroll >= 960) {
-        $("#blueprint").addClass("animate");
     }
 
 });

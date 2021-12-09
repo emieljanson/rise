@@ -1,0 +1,23 @@
+<svg width="432" height="308" viewBox="0 0 432 308" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1030_27841" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="432" height="308">
+<rect width="432" height="308" fill="url(#paint0_linear_1030_27841)"/>
+</mask>
+<g mask="url(#mask0_1030_27841)">
+<rect x="-19" y="22" width="153" height="32" rx="6" fill="#1D1931"/>
+<rect x="300" y="22" width="153" height="32" rx="6" fill="#1D1931"/>
+<rect x="140" y="40" width="154" height="32" rx="6" fill="#1D1931"/>
+<rect x="-19" y="58" width="153" height="58" rx="6" fill="#1D1931"/>
+<rect x="300" y="192" width="153" height="32" rx="6" fill="#1D1931"/>
+<rect x="-19" y="154" width="153" height="32" rx="6" fill="#1D1931"/>
+<rect x="300" y="90" width="153" height="58" rx="6" fill="#1D1931"/>
+<rect x="-19" y="228" width="153" height="32" rx="6" fill="#1D1931"/>
+<rect x="300" y="228" width="153" height="32" rx="6" fill="#1D1931"/>
+<rect x="140" y="248" width="154" height="32" rx="6" fill="#1D1931"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1030_27841" x1="216" y1="0" x2="216" y2="308" gradientUnits="userSpaceOnUse">
+<stop offset="0.458333"/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

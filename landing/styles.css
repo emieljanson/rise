@@ -132,6 +132,7 @@ button.big {
 .menu.active {
   box-shadow: 0px 1px #1F1C39;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   background-color: #04001ED9;
   transition: box-shadow 0.5s ease;
 }
@@ -166,7 +167,7 @@ button.big {
 }
 .menu .menu-container .menu-content ul #badge {
   background-color: #FF4D74;
-  color: #04001E;
+  color: #fff;
   border-radius: 100%;
   font-size: 14px;
   width: 24px;
@@ -180,6 +181,17 @@ button.big {
   text-align: center;
   margin-top: 240px;
   margin-bottom: -400px;
+}
+.header .announcement {
+  border-radius: 80px;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #FF4D74;
+  display: inline-block;
+  top: -56px;
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
 }
 .header h1 {
   max-width: 880px;
@@ -282,14 +294,18 @@ button.big {
 .landingpage .visual .visual-bg {
   background: radial-gradient(138.06% 105.73% at 0.93% 104.35%, #FFDFC2 0%, #FFD6F7 30.06%, #B391FF 65.62%, #4175B6 100%);
   border-radius: 12px;
-  padding-top: 21px;
+  padding: 32px 32px 0 32px;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 .landingpage .visual .visual-bg img {
-  margin-bottom: -121px;
+  margin-bottom: -44px;
   width: 100%;
   transform: translateY(24px) scale(0.98) translate3d(0, 0, 0);
   opacity: 0;
+  box-shadow: 0px 20px 30px 1px rgba(0, 0, 0, 0.1), 0px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 .landingpage .visual.animate {
   opacity: 1;
@@ -318,7 +334,7 @@ button.big {
 }
 .landingpage .features-grid .feature-tile.small {
   flex: 1 1 21%;
-  height: 240px;
+  height: 200px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -346,50 +362,30 @@ button.big {
   max-width: 480px;
 }
 .landingpage .features-focus #blueprint {
-  background-image: url(img/blueprint.svg);
+  background-image: url(img/blueprint.png);
   background-repeat: no-repeat;
-  background-position: right -12px bottom;
-  transform: translate3d(0, 0, 0);
-}
-.landingpage .features-focus #blueprint.animate {
   background-position: right bottom;
-  transition: all 1s ease-out;
-}
-.landingpage .features-focus #focusguard {
-  background-image: url(img/focusguard.svg);
-  background-repeat: no-repeat;
-  background-position: center top 40px;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  background-size: 665px auto;
 }
 .landingpage .features-focus #suggestions {
-  background-image: url(img/magic.svg);
-  background-repeat: no-repeat;
-  background-position: center top 60px;
-  flex: 0.3 0.3 21%;
-  height: 440px;
+  background: url(img/suggestions.png) no-repeat center top 56px/188px auto, url(img/icon-suggestions-bg.svg) no-repeat center top/100% auto, #141228;
+  flex: 0.3 0.3 25%;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  transform: translate3d(0, 0, 0);
+}
+.landingpage .features-focus #calendars {
+  background-image: url(img/calendars.png);
+  background-repeat: no-repeat;
+  background-position: center top 40px;
+  background-size: 280px auto;
+  flex: 0.3 0.3 25%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 .landingpage .features-focus #fat {
-  background: url(img/fat.svg) no-repeat center bottom, url(img/lines-tile.svg) no-repeat bottom/100% auto, #141228;
-  height: 440px;
-}
-.landingpage .features-focus #defrag {
-  background-image: url(img/defrag-2.svg);
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
-.landingpage .features-focus #sync {
-  background-image: url(img/calendarsync.svg);
-  background-repeat: no-repeat;
-  background-position: center top 8px;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  background: url(img/fat.png) no-repeat center bottom/570px auto, url(img/lines-tile.svg) no-repeat bottom/100% auto, #141228;
 }
 .landingpage .features-small {
   display: flex;
@@ -406,19 +402,39 @@ button.big {
   text-align: center;
 }
 .landingpage .features-individual #commandbox {
-  background-image: url(img/commandbox.svg);
+  background-image: url(img/commandbox.png);
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: 570px auto;
   height: 420px;
 }
 .landingpage .features-individual #tasks {
-  background-image: url(img/focusguard.svg);
+  background-image: url(img/tasks.png);
   background-repeat: no-repeat;
-  background-position: center top 40px;
+  background-position: center top 56px;
+  background-size: 358px auto;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   height: 420px;
+}
+.landingpage .features-individual #joinlinks {
+  background-image: url(img/icon-joinlink.svg);
+  background-repeat: no-repeat;
+  background-position: left 48px top 64px;
+  background-size: auto 64px;
+}
+.landingpage .features-individual #timetravel {
+  background-image: url(img/icon-timetravel.svg);
+  background-repeat: no-repeat;
+  background-position: left 48px top 64px;
+  background-size: 74px auto;
+}
+.landingpage .features-individual #availability {
+  background-image: url(img/icon-availability.svg);
+  background-repeat: no-repeat;
+  background-position: left 48px top 64px;
+  background-size: auto 64px;
 }
 
 .manifest .content.wrapper {
