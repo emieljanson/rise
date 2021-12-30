@@ -1,7 +1,6 @@
 @import "common.sass"
 
 //General
-
 body
   font-family: $typeface-primary
   font-size: 18px
@@ -17,6 +16,8 @@ body
 .wrapper
   max-width: $maxWidth
   margin: 0 auto
+  padding-left: $sidePadding
+  padding-right: $sidePadding
 
 h1
   font-weight: 800
@@ -71,13 +72,35 @@ button
   color: $white
   cursor: pointer
   box-shadow: $elevation-300
+  transition: box-shadow .3s
 
   &.big
     padding: 20px 24px
     font-size: 18px
 
-//Sections
+  &:hover
+    box-shadow: $elevation-300, 0px 0px 32px rgba(113, 97, 236, 0.4)
+    transition: box-shadow .1s
+    background-color: $purple-300
 
+form
+  font-size: 0
+  box-shadow: $elevation-300
+
+input
+  border: 0
+  outline: 0
+  font-family: $typeface-primary
+  color: $purple-900
+  background-color: $white
+  font-size: 16px
+  border-radius: 6px
+  font-weight: 500
+
+  &::placeholder
+    color: #D6D6DD
+
+//Sections
 .menu
   position: sticky
   top: 0
@@ -104,6 +127,7 @@ button
 
       .logo
         margin-right: 8px
+        height: 30px
 
     .menu-content
       display: flex
@@ -130,10 +154,24 @@ button
           display: inline-block
           margin-left: 4px
 
+      @media only screen and (max-width: $breakXL)
+        ul
+          padding-left: 0px
+
+          li
+            margin-left: 24px
+
+            &#login
+              display: none
+
+
 .header
   text-align: center
   margin-top: 240px
   margin-bottom: -400px
+  //Prevent background gradient to animate on top of header
+  z-index: 2
+  position: relative
 
   .announcement
     border-radius: 80px
@@ -145,6 +183,8 @@ button
     position: relative
     font-weight: 500
     font-size: 16px
+    opacity: 0
+    transform: scale(0.95)
 
   h1
     max-width: 880px
@@ -161,11 +201,26 @@ button
     transform: translateY(20px)
     opacity: 0
 
-  button
+  form
+    display: flex
+    justify-content: center
     transform: translateY(10px)
     opacity: 0
 
+    button
+      border-radius: 0px 6px 6px 0px
+
+    input
+      padding: 20px 16px
+      border-radius: 6px 0px 0px 6px
+
+
   &.animate
+    .announcement
+      opacity: 1
+      transform: scale(1)
+      transition: all 1s 1s ease-out
+
     h1
       transform: translateY(0px)
       opacity: 1
@@ -176,10 +231,27 @@ button
       opacity: 1
       transition: all .5s .3s ease-out
 
-    button
-      transform: translateY(0px)
-      opacity: 1
-      transition: all .5s .5s ease-out
+    .form-container
+      display: inline-block
+
+      form
+        transform: translateY(0px)
+        opacity: 1
+        transition: translateY .5s .5s ease-out, opacity .5s .5s ease-out
+        border-radius: 6px
+
+        input
+          margin: 0
+
+        button
+          transition: box-shadow .5s ease
+          margin: 0
+          box-shadow: none
+
+          &:hover
+            box-shadow: $elevation-300, 0px 0px 48px rgba(113, 97, 236, 0.4)
+            transition: box-shadow .1s
+            background-color: $purple-300
 
 .signup
   background-color: $purple-400
@@ -191,6 +263,25 @@ button
   background-repeat: no-repeat
   background-size: cover
   background-position: right bottom
+  cursor: pointer
+  box-shadow: 0px 0px 136px rgba(113, 97, 236, 0.1)
+  transition: all 2s
+  display: block
+
+  span
+    transition: opacity .5s ease, margin-left 2s ease
+    opacity: 0
+    margin-left: -8px
+
+  &:hover
+    box-shadow: 0px 0px 240px rgba(113, 97, 236, 0.3)
+    transition: all .1s
+    background-color: $purple-300
+
+    span
+      margin-left: 8px
+      transition: all .3s ease
+      opacity: 1
 
   h2
     margin: 16px 0 0 0
@@ -211,9 +302,24 @@ button
     align-content: space-between
     justify-content: space-between
 
+    .logo
+      display: inline-flex
+      align-items: center
+
+      svg
+        height: 16px
+        width: auto
+        margin-right: 8px
+
+        path
+          fill: $purple-100
+
+    @media only screen and (max-width: $breakL)
+      .logo
+        display: none
+
     .menu-content
       display: flex
-
 
       ul
         list-style: none
@@ -235,13 +341,51 @@ button
           display: inline-block
           margin-left: 4px
 
+.subscribe
+    visibility: hidden
+    opacity: 0
+    position: sticky
+    display: flex
+    align-items: center
+    justify-content: center
+    top: 0
+    bottom: 0
+    background-color: #04001EED
+    height: 100vh
+    margin-bottom: -100vh
+    z-index: 99
+    backdrop-filter: blur(4px)
+    -webkit-backdrop-filter: blur(4px)
+    transition: all .5s ease-out
+
+    .form-container
+      border-radius: 8px
+      background-color: $white
+      padding: 4px 4px 4px 16px
+      opacity: 0
+      transform: scale(0.8)
+
+      form
+        box-shadow: none
+
+    &:target
+      visibility: visible
+      opacity: 1
+
+      .form-container
+        transform: scale(1)
+        opacity: 1
+        transition: all .2s .3s ease-out
+
+
+
 //Pages
 
 .landingpage
   .visual
     background: radial-gradient(26.24% 26.37% at 81.6% 66.27%, rgba(190, 155, 254, 0.5) 0%, rgba(188, 153, 253, 0) 100%), radial-gradient(40.63% 30.82% at 19.76% 69.18%, rgba(250, 217, 202, 0.3) 0%, rgba(251, 217, 205, 0) 100%), radial-gradient(48.89% 43.65% at 50% 47.34%, #4F79BF 0%, rgba(86, 122, 195, 0) 100%)
     margin: 0 auto
-    padding: 496px 0 366px 0
+    padding: 496px $sidePadding 366px $sidePadding
     opacity: 0
     background-position: center center
     background-repeat: no-repeat
@@ -253,6 +397,10 @@ button
       box-sizing: border-box
       margin: 0 auto
 
+      @media only screen and (max-width: $breakL)
+        padding: 24px 24px 0 24px
+        border-radius: 8px
+
       img
         margin-bottom: -44px
         width: 100%
@@ -263,7 +411,6 @@ button
         box-sizing: border-box
 
     &.animate
-      // background-size: 100% 100%
       opacity: 1
       transition: all 2s ease
 
@@ -290,10 +437,15 @@ button
 
       &.small
         flex: 1 1 21%
-        height: 200px
+        height: auto
         display: flex
         justify-content: flex-end
         flex-direction: column
+
+        @media only screen and (min-width: $breakL) and (max-width: $breakXL)
+          justify-content: flex-start
+          padding: 24px
+          background-color: transparent
 
       h3, h4, p
         max-width: 440px
@@ -304,24 +456,43 @@ button
       p
         margin: 0
 
+      @media only screen and (max-width: $breakXL)
+        padding: 32px
+        flex: 1 1 30%
+        height: 420px
+
+        &.big
+          flex: 1 1 30%
+
+      @media only screen and (max-width: $breakL)
+        padding: 24px
+        flex: 1 1 100%
+
+        &.big
+          flex: 1 1 100%
+
   .features-focus
     margin-top: -200px
 
     h2, .subtitle
       text-align: center
+      max-width: 740px
+      margin: 0 auto
 
     h2
       margin-bottom: 24px
 
     .subtitle
       margin: 0 auto 80px auto
-      max-width: 480px
 
     #blueprint
       background-image: url(img/blueprint.png)
       background-repeat: no-repeat
-      background-position: right bottom
+      background-position: left 84px bottom
       background-size: 665px auto
+
+      @media only screen and (min-width: $breakL) and (max-width: $breakXL)
+        background-position: left bottom
 
     #suggestions
       background: url(img/suggestions.png) no-repeat center top 56px / 188px auto, url(img/icon-suggestions-bg.svg) no-repeat center top / 100% auto, $purple-800
@@ -343,6 +514,17 @@ button
     #fat
       background: url(img/fat.png) no-repeat center bottom / 570px auto, url(img/lines-tile.svg) no-repeat bottom / 100% auto, $purple-800
 
+      @media only screen and (min-width: $breakL) and (max-width: $breakXL)
+        background: url(img/fat.png) no-repeat left -32px bottom / 570px auto, $purple-800
+
+    @media only screen and (max-width: $breakXL)
+      #blueprint, #suggestions, #calendars
+        flex: 1 1 30%
+
+    @media only screen and (max-width: $breakL)
+      #blueprint, #suggestions, #calendars
+        flex: 1 1 100%
+
 
   .features-small
     display: flex
@@ -351,6 +533,12 @@ button
     .item
       flex: 1 1 0
       padding: 20px
+
+    @media only screen and (max-width: $breakXL)
+      padding: 0
+
+      .item
+        padding: 24px
 
   .features-individual
     margin: 120px auto
@@ -365,8 +553,11 @@ button
       background-size: 570px auto
       height: 420px
 
+      @media only screen and (min-width: $breakL) and (max-width: $breakXL)
+        background-position: left -32px bottom
+
     #tasks
-      background-image: url(img/tasks.png)
+      background-image: url(img/task.png)
       background-repeat: no-repeat
       background-position: center top 56px
       background-size: 358px auto
@@ -376,22 +567,20 @@ button
       height: 420px
 
     #joinlinks
-      background-image: url(img/icon-joinlink.svg)
-      background-repeat: no-repeat
-      background-position: left 48px top 64px
-      background-size: auto 64px
+      margin: 16px 0px 24px 0px
+      height: 64px
+      width: fit-content
 
     #timetravel
-      background-image: url(img/icon-timetravel.svg)
-      background-repeat: no-repeat
-      background-position: left 48px top 64px
-      background-size: 74px auto
+      margin: 16px 0px 24px 0px
+      width: 74px
+      height: fit-content
 
     #availability
-      background-image: url(img/icon-availability.svg)
-      background-repeat: no-repeat
-      background-position: left 48px top 64px
-      background-size: auto 64px
+      margin: 16px 0px 24px 0px
+      height: 64px
+      width: fit-content
+
 
 .manifest
   .content

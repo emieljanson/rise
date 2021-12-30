@@ -1,20 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Rise</title>
 
+  <meta charset="UTF-8">
+  <meta name="description" content="Rise is a calendar that brings you and your team more time to focus.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="img/favicon/Favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicon/Favicon-64.png" sizes="64x64">
+  <link rel="icon" type="image/png" href="img/favicon/Favicon-128.png" sizes="128x128">
+  <link rel="icon" type="image/png" href="img/favicon/Favicon-196.png" sizes="196x196">
 
+  <script defer data-domain="risecalendar.com" src="https://plausible.io/js/plausible.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 </head>
 
 <body class="landingpage">
+
+  <div id="subscribe" class="subscribe">
+    <div class="form-container">
+      <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="191722FC90141D02184CB1B62AB3DC26A91AFED49FA462BD24A7D2AEAC9D5FD0ADC9DE6DA5E94B8BB1C9E5A121C728FA0B636A5CD6C0C059F7F1AC90C13A83B9">
+      <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-jldhdli-jldhdli" required="" placeholder="your e-mail" type="email">
+      <button class="big" type="submit">Request Access</button>
+      </form>
+    </div>
+  </div>
+
   <div class="menu">
     <div class="wrapper menu-container">
       <div class="logo-container">
         <img src="img/rise-logo.svg" class="logo"/>
-        Rise
       </div>
 
       <div class="menu-content">
@@ -24,7 +41,7 @@
         </ul>
 
         <ul>
-          <li><a href="/">Log in</a></li>
+          <li id="login"><a href="/">Log in</a></li>
           <li><button>Request Access</button></li>
         </ul>
       </div>
@@ -33,11 +50,16 @@
 
   <div class="header wrapper">
     <div class="announcement">
-        We've raised a $3M pre-seed round led by Lachy Groom &#8594;
+      We've raised a $3M pre-seed round led by Lachy Groom &#8594;
     </div>
-    <h1>More time to get stuff done. For you and your team.</h1>
-    <p>Rise is a next-generation calendar that protects time to focus and minimizes distractions.</p>
-    <button class="big">Request Access</button>
+    <h1>More time to get stuff done.</h1>
+    <p>Rise is a next-generation calendar that helps find time for what’s important.</p>
+    <div class="form-container">
+      <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="191722FC90141D02184CB1B62AB3DC26A91AFED49FA462BD24A7D2AEAC9D5FD0ADC9DE6DA5E94B8BB1C9E5A121C728FA0B636A5CD6C0C059F7F1AC90C13A83B9">
+      <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-jldhdli-jldhdli" required="" placeholder="your e-mail" type="email">
+      <button class="big" type="submit">Request Access</button>
+      </form>
+    </div>
   </div>
 
   <div class="visual">
@@ -47,28 +69,28 @@
   </div>
 
   <div class="features-focus wrapper">
-    <h2>Automatically balance focussed work and meetings within your team.</h2>
-    <p class="subtitle">Rise is full of features and things to make your day more efficient, productive and joyful. </p>
+    <h2>Supercharge your week with our Scheduling Engine.</h2>
+    <p class="subtitle">Reclaim focustime and effortlessly find times to meet.</p>
 
     <div class="features-grid">
       <div class="feature-tile big" id="blueprint">
-        <h3>Design your ideal work rhythm with Blueprint</h3>
-        <p>Design your ideal weekly rhythm, and help you make the most of it.</p>
+        <h3>Guard your time with a gentle nudge or hard stop</h3>
+        <p>Build a Blueprint for your perfect week: tell Rise when you like your meetings and when you like to focus and we will gently offer alternatives – even if others aren’t using Rise (yet).</p>
       </div>
 
       <div class="feature-tile" id="suggestions">
         <h3>Upgrade your week with a single click</h3>
-        <p>Protect focustime while still leaving enough space if a colleague needs you on something urgent. Also works great with colleagues who don’t use Rise yet.</p>
+        <p>Rise comes packed with a smart schedule analyzer that’s trained with the latest scientific insights and offer one-click improvements.</p>
       </div>
 
       <div class="feature-tile" id="calendars">
-        <h3>A single calendar for work and everything else</h3>
-        <p>Design your ideal weekly rhythm, and help you make the most of it.</p>
+        <h3>A calendar for work and everything else</h3>
+        <p>Link multiple accounts and you’ll never miss an important meeting again. Also: no more double bookings.</p>
       </div>
 
       <div class="feature-tile big" id="fat">
-        <h3>Intelligent Scheduler Engine 1.0 brings you maximum focustime</h3>
-        <p>Design your ideal weekly rhythm, and help you make the most of it.</p>
+        <h3>Find the best possible time, easily</h3>
+        <p>Rise checks availability, Blueprints, preferences and dozens of other signals for all attendees. Rise finds a time that works for everyone and maximizes time to focus.</p>
       </div>
 
     </div>
@@ -76,20 +98,20 @@
     <div class="features-small">
       <div class="item">
         <img src="img/icon-click.svg" class="icon">
-        <h4>Private event sharing</h4>
-        <p>Link all your calendars and never get overbooked.</p>
+        <h4>Flexible events</h4>
+        <p>Move around meetings and tasks in a set timeframe to automatically optimize your schedule.</p>
       </div>
 
       <div class="item">
         <img src="img/icon-command.svg" class="icon">
-        <h4>Share availability</h4>
-        <p>Easily share your availability with anyone outside of your organisation.</p>
+        <h4>Auto buffers</h4>
+        <p>Automatically block off time in between meetings to decompress and get ready for the next one.</p>
       </div>
 
       <div class="item">
         <img src="img/icon-speed.svg" class="icon">
-        <h4>Buffers between meetings</h4>
-        <p>Automatically add 5 or 10 minutes between meetings.</p>
+        <h4>Team locations</h4>
+        <p>See what your team is working on and who’s available at a glance.</p>
       </div>
     </div>
   </div>
@@ -99,8 +121,8 @@
 
     <div class="features-grid">
       <div class="feature-tile big" id="commandbox">
-        <h3>Do everything from the commandbox</h3>
-        <p>Design your ideal weekly rhythm, and help you make the most of it.</p>
+        <h3>Use your keyboard to get things done fast</h3>
+        <p>Everything in Rise is fully accessible from the Command Center.</p>
       </div>
 
       <div class="feature-tile" id="tasks">
@@ -108,32 +130,59 @@
         <p>Track your work, schedule tasks, don't get disturbed and share progress with colleagues.</p>
       </div>
 
-      <div class="feature-tile small" id="joinlinks">
+      <div class="feature-tile small">
+        <img id="joinlinks" src="img/icon-joinlink.svg" alt="Icon Join links">
         <h4>Join links</h4>
         <p>Join a meeting with with one click, no more looking for the link.</p>
       </div>
 
-      <div class="feature-tile small" id="timetravel">
+      <div class="feature-tile small">
+        <img id="timetravel" src="img/icon-timetravel.svg" alt="Icon Timetravel">
         <h4>Timetravel</h4>
         <p>Working with someone in another timezone, no problem with Rise.</p>
       </div>
 
-      <div class="feature-tile small" id="availability">
+      <div class="feature-tile small">
+        <img id="availability" src="img/icon-availability.svg" alt="Icon Availability">
         <h4>Share availability</h4>
         <p>Easily schedule with people outside of your organization.</p>
       </div>
     </div>
   </div>
 
-  <div class="signup wrapper">
-    <h5>Get Access</h5>
-    <h2>Join the waitinglist</h2>
+  <div class="wrapper">
+    <a class="signup" href="#subscribe">
+      <h5>Get Access</h5>
+      <h2>Join the waitinglist <span><svg width="48" height="40" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C2.68629 0 0 2.68629 0 6L0 34C0 37.3137 2.68629 40 6 40H42C45.3137 40 48 37.3137 48 34V6C48 2.68629 45.3137 0 42 0L6 0ZM14.2 21.4999H31.1513L27.1403 25.5108C26.6717 25.9795 26.6717 26.7393 27.1403 27.2079L27.567 27.6346C28.0356 28.1032 28.7954 28.1032 29.264 27.6346L35.5863 21.3123C35.6007 21.2992 35.6149 21.2857 35.6289 21.2717L36.0519 20.8487C36.4856 20.4149 36.5179 19.7317 36.1487 19.2609C36.1188 19.2226 36.0862 19.1857 36.051 19.1505L35.6244 18.7239L35.6097 18.7094L29.262 12.3617C28.7934 11.8931 28.0336 11.8931 27.5649 12.3617L27.1419 12.7847C26.6733 13.2534 26.6733 14.0132 27.1419 14.4818L31.16 18.4999H14.2C13.5373 18.4999 13 19.0371 13 19.6999V20.2999C13 20.9626 13.5373 21.4999 14.2 21.4999Z" fill="white"/>
+      </svg></span></h2>
+    </a>
   </div>
 
   <div class="footer">
     <div class="wrapper menu-container">
       <div class="logo">
-        Rise Technologies - Designed in Amsterdam
+
+        <svg width="406" height="118" viewBox="0 0 406 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.69994 79.1C4.99994 79.1 3.19994 81.8 4.49994 84.2C14.7999 103.2 34.8999 116 57.9999 116C81.0999 116 101.2 103.1 111.5 84.2C112.8 81.8 111 79.1 108.3 79.1H7.69994Z" fill="url(#paint0_linear_716_691)"/>
+        <path d="M63.9763 0H52.0236C48.7905 0 46.2432 2.64526 46.2432 5.7804V24.8851C46.2432 26.6486 44.1858 27.4324 42.9122 26.2567L29.3919 12.7365C27.1385 10.4831 23.4155 10.4831 21.1622 12.7365L12.7365 21.1622C10.4831 23.4155 10.4831 27.1385 12.7365 29.3919L26.2568 42.9121C27.4324 44.0878 26.6486 46.2432 24.8851 46.2432H5.7804C2.54729 46.2432 0 48.8885 0 52.0236V63.9763C0 67.2094 2.64526 69.7567 5.7804 69.7567H28.0203C29 69.7567 29.9797 69.3649 30.7635 68.679L55.2568 44.2838C56.7264 42.8142 59.1757 42.8142 60.7432 44.2838L85.2365 68.679C85.9223 69.3649 86.902 69.7567 87.9797 69.7567H110.22C113.453 69.7567 116 67.1115 116 63.9763V52.0236C116 48.7905 113.355 46.2432 110.22 46.2432H91.1148C89.3513 46.2432 88.5676 44.1858 89.7432 42.9121L103.264 29.3919C105.517 27.1385 105.517 23.4155 103.264 21.1622L94.8378 12.7365C92.5845 10.4831 88.8615 10.4831 86.6081 12.7365L73.0878 26.2567C71.9121 27.4324 69.7568 26.6486 69.7568 24.8851V5.7804C69.7568 2.64526 67.1115 0 63.9763 0Z" fill="url(#paint1_linear_716_691)"/>
+        <path d="M259.55 37.27H239.94V107.99H259.55V37.27Z" fill="white"/>
+        <path d="M310.89 66.93L298.09 64.35C291.51 62.92 289.07 60.67 289.11 57.26C289.06 53.02 293.85 50.26 299.93 50.26C306.74 50.26 310.8 53.99 311.76 58.55L329.72 57.44C327.97 44.41 317.47 36.35 299.61 36.35C281.52 36.35 269.59 44.73 269.64 58.36C269.59 68.95 276.27 75.81 290.08 78.57L302.33 81.01C308.5 82.25 311.31 84.51 311.4 88.05C311.31 92.24 306.75 95.23 299.89 95.23C292.89 95.23 288.24 92.24 287.04 86.48L267.75 87.49C269.59 101.03 281.1 109.36 299.84 109.36C318.16 109.36 331.29 100.01 331.33 86.06C331.29 75.86 324.61 69.73 310.89 66.93Z" fill="white"/>
+        <path d="M405.93 77.65V72.26C405.93 48.23 391.38 36.35 372.69 36.35C351.88 36.35 338.39 51.13 338.39 72.95C338.39 95.37 351.7 109.37 373.47 109.37C390.97 109.37 402.75 100.85 405.52 87.73L387.38 86.53C385.4 91.92 380.34 94.73 373.8 94.73C363.99 94.73 357.78 88.24 357.78 77.69V77.64H405.93V77.65ZM373.01 51C381.53 51 387.42 57.08 387.47 65.5H357.77C358.19 57.44 364.31 51 373.01 51Z" fill="white"/>
+        <path d="M215.15 84.95L206.78 72.62C219.73 68.65 226.99 58.75 226.99 44.5C226.99 25.76 214.6 13.7 193.2 13.7H156V107.99H175.94V74.56H184.99L197.5 92.97C208.01 108.45 221.97 108.7 230.14 108.47V91.32H227.19C222.36 91.32 217.85 88.93 215.15 84.95ZM175.93 30H189.37C200.88 30 206.45 35.11 206.45 44.5C206.45 53.85 200.88 58.54 189.46 58.54H175.92V30H175.93Z" fill="white"/>
+        <path d="M249.82 28.82C255.68 28.82 260.43 24.0697 260.43 18.21C260.43 12.3503 255.68 7.59998 249.82 7.59998C243.96 7.59998 239.21 12.3503 239.21 18.21C239.21 24.0697 243.96 28.82 249.82 28.82Z" fill="white"/>
+        <defs>
+        <linearGradient id="paint0_linear_716_691" x1="57.9932" y1="118.049" x2="57.9932" y2="79.4688" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#767DF9"/>
+        <stop offset="0.4958" stop-color="#7161EC"/>
+        <stop offset="1" stop-color="#5730E3"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_716_691" x1="57.9922" y1="0.0331149" x2="57.9922" y2="69.7907" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FF7557"/>
+        <stop offset="1" stop-color="#FFAF66"/>
+        </linearGradient>
+        </defs>
+        </svg>
       </div>
 
       <div class="menu-content">
@@ -146,8 +195,10 @@
       </div>
     </div>
   </div>
-
 </body>
+
+<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+
 <script type="text/javascript">
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -166,5 +217,23 @@ $(window).scroll(function() {
     }
 
 });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#subForm').submit(function (e) {
+            e.preventDefault();
+            $.getJSON(
+            this.action + "?callback=?",
+            $(this).serialize(),
+            function (data) {
+                if (data.Status === 400) {
+                    alert("Error: " + data.Message);
+                } else { // 200
+                    alert("Success: " + data.Message);
+                }
+            });
+        });
+    });
 </script>
 </html>

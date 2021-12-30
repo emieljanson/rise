@@ -56,6 +56,8 @@ body {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 h1 {
@@ -118,10 +120,35 @@ button {
   color: #fff;
   cursor: pointer;
   box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.1), 0px 1px 0.5px 0.5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
 }
 button.big {
   padding: 20px 24px;
   font-size: 18px;
+}
+button:hover {
+  box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.1), 0px 1px 0.5px 0.5px rgba(0, 0, 0, 0.1), 0px 0px 32px rgba(113, 97, 236, 0.4);
+  transition: box-shadow 0.1s;
+  background-color: #8878FF;
+}
+
+form {
+  font-size: 0;
+  box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.1), 0px 1px 0.5px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  border: 0;
+  outline: 0;
+  font-family: "inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #04001E;
+  background-color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+input::placeholder {
+  color: #D6D6DD;
 }
 
 .menu {
@@ -150,6 +177,7 @@ button.big {
 }
 .menu .menu-container .logo-container .logo {
   margin-right: 8px;
+  height: 30px;
 }
 .menu .menu-container .menu-content {
   display: flex;
@@ -176,11 +204,24 @@ button.big {
   display: inline-block;
   margin-left: 4px;
 }
+@media only screen and (max-width: 840px) {
+  .menu .menu-container .menu-content ul {
+    padding-left: 0px;
+  }
+  .menu .menu-container .menu-content ul li {
+    margin-left: 24px;
+  }
+  .menu .menu-container .menu-content ul li#login {
+    display: none;
+  }
+}
 
 .header {
   text-align: center;
   margin-top: 240px;
   margin-bottom: -400px;
+  z-index: 2;
+  position: relative;
 }
 .header .announcement {
   border-radius: 80px;
@@ -192,6 +233,8 @@ button.big {
   position: relative;
   font-weight: 500;
   font-size: 16px;
+  opacity: 0;
+  transform: scale(0.95);
 }
 .header h1 {
   max-width: 880px;
@@ -208,9 +251,23 @@ button.big {
   transform: translateY(20px);
   opacity: 0;
 }
-.header button {
+.header form {
+  display: flex;
+  justify-content: center;
   transform: translateY(10px);
   opacity: 0;
+}
+.header form button {
+  border-radius: 0px 6px 6px 0px;
+}
+.header form input {
+  padding: 20px 16px;
+  border-radius: 6px 0px 0px 6px;
+}
+.header.animate .announcement {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 1s 1s ease-out;
 }
 .header.animate h1 {
   transform: translateY(0px);
@@ -222,10 +279,27 @@ button.big {
   opacity: 1;
   transition: all 0.5s 0.3s ease-out;
 }
-.header.animate button {
+.header.animate .form-container {
+  display: inline-block;
+}
+.header.animate .form-container form {
   transform: translateY(0px);
   opacity: 1;
-  transition: all 0.5s 0.5s ease-out;
+  transition: translateY 0.5s 0.5s ease-out, opacity 0.5s 0.5s ease-out;
+  border-radius: 6px;
+}
+.header.animate .form-container form input {
+  margin: 0;
+}
+.header.animate .form-container form button {
+  transition: box-shadow 0.5s ease;
+  margin: 0;
+  box-shadow: none;
+}
+.header.animate .form-container form button:hover {
+  box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.1), 0px 1px 0.5px 0.5px rgba(0, 0, 0, 0.1), 0px 0px 48px rgba(113, 97, 236, 0.4);
+  transition: box-shadow 0.1s;
+  background-color: #8878FF;
 }
 
 .signup {
@@ -238,6 +312,25 @@ button.big {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
+  cursor: pointer;
+  box-shadow: 0px 0px 136px rgba(113, 97, 236, 0.1);
+  transition: all 2s;
+  display: block;
+}
+.signup span {
+  transition: opacity 0.5s ease, margin-left 2s ease;
+  opacity: 0;
+  margin-left: -8px;
+}
+.signup:hover {
+  box-shadow: 0px 0px 240px rgba(113, 97, 236, 0.3);
+  transition: all 0.1s;
+  background-color: #8878FF;
+}
+.signup:hover span {
+  margin-left: 8px;
+  transition: all 0.3s ease;
+  opacity: 1;
 }
 .signup h2 {
   margin: 16px 0 0 0;
@@ -258,6 +351,23 @@ button.big {
   align-items: center;
   align-content: space-between;
   justify-content: space-between;
+}
+.footer .menu-container .logo {
+  display: inline-flex;
+  align-items: center;
+}
+.footer .menu-container .logo svg {
+  height: 16px;
+  width: auto;
+  margin-right: 8px;
+}
+.footer .menu-container .logo svg path {
+  fill: #887F9B;
+}
+@media only screen and (max-width: 640px) {
+  .footer .menu-container .logo {
+    display: none;
+  }
 }
 .footer .menu-container .menu-content {
   display: flex;
@@ -283,10 +393,47 @@ button.big {
   margin-left: 4px;
 }
 
+.subscribe {
+  visibility: hidden;
+  opacity: 0;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  background-color: #04001EED;
+  height: 100vh;
+  margin-bottom: -100vh;
+  z-index: 99;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.5s ease-out;
+}
+.subscribe .form-container {
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 4px 4px 4px 16px;
+  opacity: 0;
+  transform: scale(0.8);
+}
+.subscribe .form-container form {
+  box-shadow: none;
+}
+.subscribe:target {
+  visibility: visible;
+  opacity: 1;
+}
+.subscribe:target .form-container {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.2s 0.3s ease-out;
+}
+
 .landingpage .visual {
   background: radial-gradient(26.24% 26.37% at 81.6% 66.27%, rgba(190, 155, 254, 0.5) 0%, rgba(188, 153, 253, 0) 100%), radial-gradient(40.63% 30.82% at 19.76% 69.18%, rgba(250, 217, 202, 0.3) 0%, rgba(251, 217, 205, 0) 100%), radial-gradient(48.89% 43.65% at 50% 47.34%, #4F79BF 0%, rgba(86, 122, 195, 0) 100%);
   margin: 0 auto;
-  padding: 496px 0 366px 0;
+  padding: 496px 24px 366px 24px;
   opacity: 0;
   background-position: center center;
   background-repeat: no-repeat;
@@ -297,6 +444,12 @@ button.big {
   padding: 32px 32px 0 32px;
   box-sizing: border-box;
   margin: 0 auto;
+}
+@media only screen and (max-width: 640px) {
+  .landingpage .visual .visual-bg {
+    padding: 24px 24px 0 24px;
+    border-radius: 8px;
+  }
 }
 .landingpage .visual .visual-bg img {
   margin-bottom: -44px;
@@ -334,10 +487,17 @@ button.big {
 }
 .landingpage .features-grid .feature-tile.small {
   flex: 1 1 21%;
-  height: 200px;
+  height: auto;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+}
+@media only screen and (min-width: 640px) and (max-width: 840px) {
+  .landingpage .features-grid .feature-tile.small {
+    justify-content: flex-start;
+    padding: 24px;
+    background-color: transparent;
+  }
 }
 .landingpage .features-grid .feature-tile h3, .landingpage .features-grid .feature-tile h4, .landingpage .features-grid .feature-tile p {
   max-width: 440px;
@@ -348,24 +508,49 @@ button.big {
 .landingpage .features-grid .feature-tile p {
   margin: 0;
 }
+@media only screen and (max-width: 840px) {
+  .landingpage .features-grid .feature-tile {
+    padding: 32px;
+    flex: 1 1 30%;
+    height: 420px;
+  }
+  .landingpage .features-grid .feature-tile.big {
+    flex: 1 1 30%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .landingpage .features-grid .feature-tile {
+    padding: 24px;
+    flex: 1 1 100%;
+  }
+  .landingpage .features-grid .feature-tile.big {
+    flex: 1 1 100%;
+  }
+}
 .landingpage .features-focus {
   margin-top: -200px;
 }
 .landingpage .features-focus h2, .landingpage .features-focus .subtitle {
   text-align: center;
+  max-width: 740px;
+  margin: 0 auto;
 }
 .landingpage .features-focus h2 {
   margin-bottom: 24px;
 }
 .landingpage .features-focus .subtitle {
   margin: 0 auto 80px auto;
-  max-width: 480px;
 }
 .landingpage .features-focus #blueprint {
   background-image: url(img/blueprint.png);
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: left 84px bottom;
   background-size: 665px auto;
+}
+@media only screen and (min-width: 640px) and (max-width: 840px) {
+  .landingpage .features-focus #blueprint {
+    background-position: left bottom;
+  }
 }
 .landingpage .features-focus #suggestions {
   background: url(img/suggestions.png) no-repeat center top 56px/188px auto, url(img/icon-suggestions-bg.svg) no-repeat center top/100% auto, #141228;
@@ -387,6 +572,21 @@ button.big {
 .landingpage .features-focus #fat {
   background: url(img/fat.png) no-repeat center bottom/570px auto, url(img/lines-tile.svg) no-repeat bottom/100% auto, #141228;
 }
+@media only screen and (min-width: 640px) and (max-width: 840px) {
+  .landingpage .features-focus #fat {
+    background: url(img/fat.png) no-repeat left -32px bottom/570px auto, #141228;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .landingpage .features-focus #blueprint, .landingpage .features-focus #suggestions, .landingpage .features-focus #calendars {
+    flex: 1 1 30%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .landingpage .features-focus #blueprint, .landingpage .features-focus #suggestions, .landingpage .features-focus #calendars {
+    flex: 1 1 100%;
+  }
+}
 .landingpage .features-small {
   display: flex;
   padding: 28px;
@@ -394,6 +594,14 @@ button.big {
 .landingpage .features-small .item {
   flex: 1 1 0;
   padding: 20px;
+}
+@media only screen and (max-width: 840px) {
+  .landingpage .features-small {
+    padding: 0;
+  }
+  .landingpage .features-small .item {
+    padding: 24px;
+  }
 }
 .landingpage .features-individual {
   margin: 120px auto;
@@ -408,8 +616,13 @@ button.big {
   background-size: 570px auto;
   height: 420px;
 }
+@media only screen and (min-width: 640px) and (max-width: 840px) {
+  .landingpage .features-individual #commandbox {
+    background-position: left -32px bottom;
+  }
+}
 .landingpage .features-individual #tasks {
-  background-image: url(img/tasks.png);
+  background-image: url(img/task.png);
   background-repeat: no-repeat;
   background-position: center top 56px;
   background-size: 358px auto;
@@ -419,22 +632,19 @@ button.big {
   height: 420px;
 }
 .landingpage .features-individual #joinlinks {
-  background-image: url(img/icon-joinlink.svg);
-  background-repeat: no-repeat;
-  background-position: left 48px top 64px;
-  background-size: auto 64px;
+  margin: 16px 0px 24px 0px;
+  height: 64px;
+  width: fit-content;
 }
 .landingpage .features-individual #timetravel {
-  background-image: url(img/icon-timetravel.svg);
-  background-repeat: no-repeat;
-  background-position: left 48px top 64px;
-  background-size: 74px auto;
+  margin: 16px 0px 24px 0px;
+  width: 74px;
+  height: fit-content;
 }
 .landingpage .features-individual #availability {
-  background-image: url(img/icon-availability.svg);
-  background-repeat: no-repeat;
-  background-position: left 48px top 64px;
-  background-size: auto 64px;
+  margin: 16px 0px 24px 0px;
+  height: 64px;
+  width: fit-content;
 }
 
 .manifest .content.wrapper {
