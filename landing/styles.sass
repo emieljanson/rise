@@ -100,6 +100,22 @@ input
   &::placeholder
     color: #D6D6DD
 
+@media only screen and (max-width: $breakL)
+  body
+    font-size: 16px
+
+  h1
+    font-size: 46px
+
+  h2
+    font-size: 34px
+
+  // h3
+  //   font-size: 24px
+  //
+  // h4
+  //   font-size: 20px
+
 //Sections
 .menu
   position: sticky
@@ -113,145 +129,77 @@ input
     background-color: #04001ED9
     transition: box-shadow 0.5s ease
 
+  #badge
+    background-color: $red-200
+    color: $white
+    border-radius: 100%
+    font-size: 14px
+    width: 24px
+    line-height: 24px
+    text-align: center
+    display: inline-block
+    margin-left: 4px
+
   .menu-container
     display: flex
     align-items: center
     align-content: space-between
     justify-content: space-between
 
-    .logo-container
-      display: flex
-      font-weight: 700
-      color: $white
-      font-size: 28px
-
-      .logo
-        margin-right: 8px
-        height: 24px
-
-    .menu-content
-      display: flex
-      font-weight: 500
-      font-size: 16px
-
-      ul
-        list-style: none
-        display: flex
-        align-items: center
-
-        li
-          display: inline-block
-          margin-left: 32px
-
-        #badge
-          background-color: $red-200
-          color: $white
-          border-radius: 100%
-          font-size: 14px
-          width: 24px
-          line-height: 24px
-          text-align: center
-          display: inline-block
-          margin-left: 4px
-
-      @media only screen and (max-width: $breakXL)
-        ul
-          padding-left: 0px
-
-          li
-            margin-left: 24px
-
-            &#login
-              display: none
-
-
-.header
-  text-align: center
-  margin-top: 240px
-  margin-bottom: -400px
-  //Prevent background gradient to animate on top of header
-  z-index: 2
-  position: relative
-
-  .announcement
-    border-radius: 80px
-    padding: 8px 16px
+  .logo-container
+    display: flex
+    font-weight: 700
     color: $white
-    background-color: $red-200
-    display: inline-block
-    top: -56px
-    position: relative
+    font-size: 28px
+
+    .logo
+      margin-right: 8px
+      height: 24px
+
+  .menu-content
+    display: flex
+
+  ul
+    list-style: none
+    display: flex
+    align-items: center
     font-weight: 500
     font-size: 16px
-    opacity: 0
-    transform: scale(0.95)
 
-  h1
-    max-width: 880px
-    margin: 0 auto
-    margin-bottom: 24px
-    transform: translateY(20px)
-    opacity: 0
-
-  p
-    font-size: 26px
-    max-width: 640px
-    margin: 0 auto
-    margin-bottom: 64px
-    transform: translateY(20px)
-    opacity: 0
-
-  form
-    display: flex
-    justify-content: center
-    transform: translateY(10px)
-    opacity: 0
-
-    button
-      border-radius: 0px 6px 6px 0px
-
-    input
-      padding: 20px 16px
-      border-radius: 6px 0px 0px 6px
-
-
-  &.animate
-    .announcement
-      opacity: 1
-      transform: scale(1)
-      transition: all 1s 1s ease-out
-
-    h1
-      transform: translateY(0px)
-      opacity: 1
-      transition: all .5s ease-out
-
-    p
-      transform: translateY(0px)
-      opacity: 1
-      transition: all .5s .3s ease-out
-
-    .form-container
+    li
       display: inline-block
+      margin-left: 32px
 
-      form
-        transform: translateY(0px)
-        opacity: 1
-        transition: translateY .5s .5s ease-out, opacity .5s .5s ease-out
-        border-radius: 6px
+    .menu-button
+      background-image: url(img/icon-menu.svg)
+      background-repeat: no-repeat
+      background-position: center center
+      width: 44px
+      height: 100%
 
-        input
-          margin: 0
+  @media only screen and (max-width: $breakXL)
+    ul
+      padding-left: 0px
 
-        button
-          transition: box-shadow .5s ease
-          margin: 0
-          box-shadow: none
+      li
+        margin-left: 16px
 
-          &:hover
-            box-shadow: $elevation-300, 0px 0px 48px rgba(113, 97, 236, 0.4)
-            transition: box-shadow .1s
-            background-color: $purple-300
+  .menu-list
+    list-style: none
+    flex-direction: column
+
+    li
+      border-top: 1px solid rgba(255, 255, 255, 0.1)
+      padding-top: 24px
+      padding-bottom: 24px
+      width: 100%
+      margin-left: 0
+
+      &:first-child
+        border: none
+
+
+
 
 .signup
   background-color: $purple-400
@@ -332,11 +280,11 @@ input
 
         #badge
           background-color: $red-200
-          color: $purple-900
+          color: $white
           border-radius: 100%
-          font-size: 14px
-          width: 24px
-          line-height: 24px
+          font-size: 12px
+          width: 20px
+          line-height: 20px
           text-align: center
           display: inline-block
           margin-left: 4px
@@ -348,6 +296,7 @@ input
     display: flex
     align-items: center
     justify-content: center
+    flex-direction: column
     top: 0
     bottom: 0
     background-color: #04001EED
@@ -356,12 +305,13 @@ input
     z-index: 99
     backdrop-filter: blur(4px)
     -webkit-backdrop-filter: blur(4px)
-    transition: all .5s ease-out
+    transition: all .2s ease-out
 
     .form-container
       border-radius: 8px
       background-color: $white
       padding: 4px 4px 4px 16px
+      margin-top: 24px
       opacity: 0
       transform: scale(0.8)
 
@@ -375,13 +325,115 @@ input
       .form-container
         transform: scale(1)
         opacity: 1
-        transition: all .2s .3s ease-out
-
-
+        transition: all .2s .1s ease-out
 
 //Pages
-
 .landingpage
+  .header
+    text-align: center
+    margin-top: 240px
+    margin-bottom: -400px
+    //Prevent background gradient to animate on top of header
+    z-index: 2
+    position: relative
+
+    .announcement
+      border-radius: 80px
+      padding: 8px 16px
+      color: $white
+      background-color: $red-200
+      display: inline-block
+      top: -56px
+      position: relative
+      font-weight: 500
+      font-size: 16px
+      opacity: 0
+      transform: scale(0.95)
+
+    h1
+      max-width: 880px
+      margin: 0 auto
+      margin-bottom: 24px
+      transform: translateY(20px)
+      opacity: 0
+
+    p
+      font-size: 26px
+      max-width: 640px
+      margin: 0 auto
+      margin-bottom: 64px
+      transform: translateY(20px)
+      opacity: 0
+
+      @media only screen and (max-width: $breakL)
+        font-size: 22px
+
+    @media only screen and (max-width: $breakL)
+      .form-container
+        width: 100%
+
+    form
+      display: flex
+      justify-content: center
+      transform: translateY(10px)
+      opacity: 0
+
+      button
+        border-radius: 0px 6px 6px 0px
+
+      input
+        padding: 20px 16px
+        border-radius: 6px 0px 0px 6px
+
+      @media only screen and (max-width: $breakL)
+        flex-direction: column
+
+        button
+          border-radius: 0px 0px 6px 6px
+
+        input
+          border-radius: 6px 6px 0px 0px
+
+
+
+    &.animate
+      .announcement
+        opacity: 1
+        transform: scale(1)
+        transition: all 1s 1s ease-out
+
+      h1
+        transform: translateY(0px)
+        opacity: 1
+        transition: all .5s ease-out
+
+      p
+        transform: translateY(0px)
+        opacity: 1
+        transition: all .5s .3s ease-out
+
+      .form-container
+        display: inline-block
+
+        form
+          transform: translateY(0px)
+          opacity: 1
+          transition: translateY .5s .5s ease-out, opacity .5s .5s ease-out
+          border-radius: 6px
+
+          input
+            margin: 0
+
+          button
+            transition: box-shadow .5s ease
+            margin: 0
+            box-shadow: none
+
+            &:hover
+              box-shadow: $elevation-300, 0px 0px 48px rgba(113, 97, 236, 0.4)
+              transition: box-shadow .1s
+              background-color: $purple-300
+
   .visual
     background: radial-gradient(26.24% 26.37% at 81.6% 66.27%, rgba(190, 155, 254, 0.5) 0%, rgba(188, 153, 253, 0) 100%), radial-gradient(40.63% 30.82% at 19.76% 69.18%, rgba(250, 217, 202, 0.3) 0%, rgba(251, 217, 205, 0) 100%), radial-gradient(48.89% 43.65% at 50% 47.34%, #4F79BF 0%, rgba(86, 122, 195, 0) 100%)
     margin: 0 auto
@@ -396,10 +448,6 @@ input
       padding: 32px 32px 0 32px
       box-sizing: border-box
       margin: 0 auto
-
-      @media only screen and (max-width: $breakL)
-        padding: 24px 24px 0 24px
-        border-radius: 8px
 
       img
         margin-bottom: -44px
@@ -418,6 +466,17 @@ input
         transform: translateY(0) scale(1)
         opacity: 1
         transition: transform .7s .5s ease-out, opacity 0.5s .5s ease-out
+
+  @media only screen and (max-width: $breakL)
+    .visual
+      background: radial-gradient(62.58% 13.84% at 79.87% 56.65%, rgba(190, 155, 254, 0.35) 0%, rgba(188, 153, 253, 0) 100%), radial-gradient(116.23% 19.11% at 21.07% 55.91%, rgba(250, 217, 202, 0.5) 0%, rgba(251, 217, 205, 0) 100%), radial-gradient(83.49% 20.1% at 50.13% 43.5%, #4F79BF 0%, rgba(86, 122, 195, 0) 100%)
+      margin-top: 194px
+      padding: 336px 16px 366px 16px
+
+      .visual-bg
+        padding: 16px 16px 0 16px
+        border-radius: 8px
+
 
   .features-grid
     display: flex
@@ -494,6 +553,11 @@ input
       @media only screen and (min-width: $breakL) and (max-width: $breakXL)
         background-position: left bottom
 
+      @media only screen and (max-width: $breakL)
+        height: 520px
+        background-position: left 24px bottom
+
+
     #suggestions
       background: url(img/suggestions.png) no-repeat center top 56px / 188px auto, url(img/icon-suggestions-bg.svg) no-repeat center top / 100% auto, $purple-800
       flex: 0.3 0.3 25%
@@ -525,7 +589,6 @@ input
       #blueprint, #suggestions, #calendars
         flex: 1 1 100%
 
-
   .features-small
     display: flex
     padding: 28px
@@ -539,6 +602,9 @@ input
 
       .item
         padding: 24px
+
+    @media only screen and (max-width: $breakL)
+      flex-direction: column
 
   .features-individual
     margin: 120px auto
@@ -581,7 +647,6 @@ input
       height: 64px
       width: fit-content
 
-
 .manifest
   .content
     &.wrapper
@@ -593,3 +658,10 @@ input
 
       p
         font-size: 24px
+
+//Mobile
+.desktop
+  display: none !important
+
+.menu-list
+  display: none !important
